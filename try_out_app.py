@@ -9,6 +9,7 @@ if language == 'Русский':
   placechoice = st.selectbox("Куда ты хочешь пойти сегодня? Bыбери одно из указанных мест", ('Площадка для игр', 'Школа', 'Магазин'))
   if placechoice == 'Площадка для игр':
     image1 = Image.open('Parcogiochi.jpg')
+    st.image(image1)
     st.write("1. Давайте играть в прятки")
   
 if language == 'Yкраїнський':
