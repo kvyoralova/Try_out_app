@@ -1,4 +1,5 @@
 import streamlit as st
+from PIL import Image
 
 st.title("Итальянский разговорник для детей - Італійський розмовник для дітей")
 
@@ -7,7 +8,7 @@ language = st.radio( "Выберите язык - Виберіть мову" , (
 if language == 'Русский':
   placechoice = st.selectbox("Куда ты хочешь пойти сегодня? Bыбери одно из указанных мест", ('Площадка для игр', 'Школа', 'Магазин'))
   if placechoice == 'Площадка для игр':
-    st.image(
+    image1 = Image.open('Parcogiochi.jpg')
     st.write("1. Давайте играть в прятки")
   
 if language == 'Yкраїнський':
