@@ -19,14 +19,14 @@ if language == 'Русский':
       
     with col2:
       st.header("Итальянский")
-      textpl1 = "Andiamo al parco"
+      textpl1 = _"Andiamo al parco"_
       st.write(" 1.", textpl1, )
       tts1=gTTS(textpl1, lang = 'it')
       tts1.save('your_file.mp3')
       audio_file = open('your_file.mp3', 'rb')
       st.audio(data=audio_file, format="audio/mp3", start_time = 0)
       result1 = transliterate_text(textpl1,  "ru")
-      st.write(_result1_)
+      st.write(result1)
       
       
     with col1:
