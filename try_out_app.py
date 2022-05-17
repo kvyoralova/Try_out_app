@@ -17,9 +17,12 @@ if language == 'Русский':
     sentence1 = "1. Пойдем в парк" 
     sentence2 = "2. Давай играть в прятки"
     sentence3 = "3. Давай покатаемся на качелях"
+    sentence4 = "4. Пойдемте на горку"
     translation1 = "Andiamo al parco"
     translation2 = "Giochiamo a nascondino"
     translation3 = "Andiamo sull'altalena"
+    translation4 = "Andiamo sullo scivolo"
+    
     col1, col2 = st.columns(2)
     with col1:
       st.header("Русский")
@@ -57,6 +60,17 @@ if language == 'Русский':
       audio_file = open('your_file.mp3', 'rb')
       st.audio(data=audio_file, format="audio/mp3", start_time = 0)
       result3 = transliterate_text(translation3,  "ru")
+      st.write(result3)
+      
+    with col1:  
+      st.write(sentence4)
+    with col2:           
+      st.write(translation4)
+      tts1=gTTS(translation4, lang = 'it')
+      tts1.save('your_file.mp3')
+      audio_file = open('your_file.mp3', 'rb')
+      st.audio(data=audio_file, format="audio/mp3", start_time = 0)
+      result3 = transliterate_text(translation4,  "ru")
       st.write(result3)
   
 if language == 'Yкраїнський':
