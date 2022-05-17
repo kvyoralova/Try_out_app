@@ -8,6 +8,11 @@ from google.transliteration import transliterate_text
 st.title("Італійський розмовник для дітей - Итальянский разговорник для детей")
 
 language = st.radio( "Виберіть мову - Выберите язык" , ('Русский', 'Yкраїнський'))
+translation1 = "Andiamo al parco"
+translation2 = "Giochiamo a nascondino"
+translation3 = "Andiamo sull'altalena"
+translation4 = "Andiamo sullo scivolo"
+    
 
 if language == 'Русский':
   placechoice = st.selectbox("Куда ты хочешь пойти сегодня? Bыбери одно из указанных мест:", ('Площадка для игр', 'Школа', 'Магазин'))
@@ -18,10 +23,6 @@ if language == 'Русский':
     sentence2 = "2. Давай играть в прятки"
     sentence3 = "3. Давай покатаемся на качелях"
     sentence4 = "4. Пойдем на горку"
-    translation1 = "Andiamo al parco"
-    translation2 = "Giochiamo a nascondino"
-    translation3 = "Andiamo sull'altalena"
-    translation4 = "Andiamo sullo scivolo"
     
     col1, col2 = st.columns(2)
     with col1:
