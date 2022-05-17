@@ -5,9 +5,9 @@ from google.transliteration import transliterate_text
 #from transliterate import translit, get_available_language_codes
 
 
-st.title("Итальянский разговорник для детей - Італійський розмовник для дітей")
+st.title("Італійський розмовник для дітей - Итальянский разговорник для детей")
 
-language = st.radio( "Выберите язык - Виберіть мову" , ('Русский', 'Yкраїнський'))
+language = st.radio( "Виберіть мову - Выберите язык" , ('Русский', 'Yкраїнський'))
 
 if language == 'Русский':
   placechoice = st.selectbox("Куда ты хочешь пойти сегодня? Bыбери одно из указанных мест:", ('Площадка для игр', 'Школа', 'Магазин'))
@@ -17,6 +17,9 @@ if language == 'Русский':
     sentence1 = "1. Пойдем в парк" 
     sentence2 = "2. Давай играть в прятки"
     sentence3 = "3. Давай покатаемся на качелях"
+    translation1 = "Andiamo al parco"
+    translation2 = "Giochiamo a nascondino"
+    translation3 = "Andiamo sull'altalena"
     col1, col2 = st.columns(2)
     with col1:
       st.header("Русский")
@@ -24,39 +27,36 @@ if language == 'Русский':
       
     with col2:
       st.header("Итальянский")
-      textpl1 = "Andiamo al parco"
-      st.write(" 1.", textpl1, )
-      tts1=gTTS(textpl1, lang = 'it')
+      st.write(translation1)
+      tts1=gTTS(translation1, lang = 'it')
       tts1.save('your_file.mp3')
       audio_file = open('your_file.mp3', 'rb')
       st.audio(data=audio_file, format="audio/mp3", start_time = 0)
       #st.write(translit(textpl1, 'ru')
-      result1 = transliterate_text(textpl1,  "ru")
+      result1 = transliterate_text(translation1,  "ru")
       st.write(result1)
       
     with col1:
       st.write(sentence2)
     with col2:
-      textpl2 = "Giochiamo a nascondino"
-      st.write("2. ", textpl2)
-      tts1=gTTS(textpl2, lang = 'it')
+      st.write(translation2)
+      tts1=gTTS(translation2, lang = 'it')
       tts1.save('your_file.mp3')
       audio_file = open('your_file.mp3', 'rb')
       st.audio(data=audio_file, format="audio/mp3", start_time = 0)
-      result2 = transliterate_text(textpl2,  "ru")
+      result2 = transliterate_text(translation2,  "ru")
       st.write(result2)
       #st.write(translit(textpl2 'ru')
       
     with col1:  
       st.write(sentence3)
     with col2:           
-      textpl3 = "Andiamo sull'altalena"
-      st.write("3.", textpl3)
-      tts1=gTTS(textpl3, lang = 'it')
+      st.write(translation3)
+      tts1=gTTS(translation3, lang = 'it')
       tts1.save('your_file.mp3')
       audio_file = open('your_file.mp3', 'rb')
       st.audio(data=audio_file, format="audio/mp3", start_time = 0)
-      result3 = transliterate_text(textpl3,  "ru")
+      result3 = transliterate_text(translation3,  "ru")
       st.write(result3)
   
 if language == 'Yкраїнський':
