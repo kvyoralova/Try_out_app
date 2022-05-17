@@ -10,7 +10,10 @@ if language == 'Русский':
   if placechoice == 'Площадка для игр':
     image1 = Image.open('playground.jpg')
     st.image(image1, caption='Photo by Pond Juprasong on Unsplash')
-    st.write("1. Давайте играть в прятки")
+    col1, col2 = st.columns(2)
+    with col1:
+      st.header("Русский")
+      st.write("1. Давайте играть в прятки /n 2. Пойдем в парк")
   
 if language == 'Yкраїнський':
   placecoicheuk = st.selectbox("Куди ти хочеш піти сьогодні? Bыбери одно з вказаних місць:", ('Майданчик для ігор', 'Школа', 'Магазин'))
