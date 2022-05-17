@@ -20,7 +20,7 @@ if language == 'Русский':
               "3.Давай покатаемся на качелях")
     with col2:
       text = "Andiamo al parco"
-      tts1=gTTS(text =, lang = it)
+      tts1=gTTS(text, lang = it)
       tts1.save('your_file.mp3')
       audio_file = open('your_file.mp3', 'rb')
       st.audio(data=audio_file, format="audio/mp3", start_time = 0)
