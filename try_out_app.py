@@ -30,7 +30,7 @@ if language == 'Русский':
       st.write("2. Давай играть в прятки")
     with col2:
       textpl2 = "Giochiamo a nascondino"
-      st.write(textpl2)
+      st.write("2. ", textpl2)
       tts1=gTTS(textpl2, lang = 'it')
       tts1.save('your_file.mp3')
       audio_file = open('your_file.mp3', 'rb')
@@ -40,7 +40,7 @@ if language == 'Русский':
       st.write("3. Давай покатаемся на качелях")
     with col2:           
       textpl3 = "Andiamo sull'altalena"
-      st.write(textpl3)
+      st.write("3.", textpl3)
       tts1=gTTS(textpl3, lang = 'it')
       tts1.save('your_file.mp3')
       audio_file = open('your_file.mp3', 'rb')
