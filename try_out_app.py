@@ -19,7 +19,7 @@ if language == 'Русский':
       
     with col2:
       st.header("Итальянский")
-      st.write("Andiamo al parco")
+      st.write("1. Andiamo al parco")
       text1 = "Andiamo al parco"
       tts1=gTTS(text1, lang = 'it')
       tts1.save('your_file.mp3')
@@ -29,7 +29,7 @@ if language == 'Русский':
     with col1:
       st.write("2. Давай играть в прятки")
     with col2:
-      st.write("Giochiamo a nascondino")
+      st.write("2. Giochiamo a nascondino")
       text2 = "Giochiamo a nascondino"
       tts1=gTTS(text2, lang = 'it')
       tts1.save('your_file.mp3')
@@ -39,7 +39,7 @@ if language == 'Русский':
     with col1:  
       st.write("3. Давай покатаемся на качелях")
     with col2:           
-      st.write("Andiamo sull'altalena")
+      st.write("3. Andiamo sull'altalena")
       text3 = "Andiamo sull'altalena"
       tts1=gTTS(text3, lang = 'it')
       tts1.save('your_file.mp3')
