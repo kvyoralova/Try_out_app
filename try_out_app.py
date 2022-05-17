@@ -1,5 +1,7 @@
 import streamlit as st
 from PIL import Image
+from gtts import gTTS
+
 
 st.title("Итальянский разговорник для детей - Італійський розмовник для дітей")
 
@@ -13,7 +15,15 @@ if language == 'Русский':
     col1, col2 = st.columns(2)
     with col1:
       st.header("Русский")
-      st.write("1. Давайте играть в прятки /n 2. Пойдем в парк")
+      st.write("1. Пойдем в парк", 
+               "2. Давай играть в прятки",
+              "3.Давай покатаемся на качелях")
+    with col2:
+      text = "Andiamo al parco"
+        tts1=gTTS(text =, lang = it)
+        tts1.save('your_file.mp3')
+        audio_file = open('your_file.mp3', 'rb')
+        st.audio(data=audio_file, format="audio/mp3", start_time = 0)
   
 if language == 'Yкраїнський':
   placecoicheuk = st.selectbox("Куди ти хочеш піти сьогодні? Bыбери одно з вказаних місць:", ('Майданчик для ігор', 'Школа', 'Магазин'))
