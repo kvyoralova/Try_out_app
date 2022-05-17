@@ -30,7 +30,7 @@ if language == 'Русский':
       
     with col2:
       st.header("Итальянский")
-      st.write(translation1)
+      st.write("1. ", translation1)
       tts1=gTTS(translation1, lang = 'it')
       tts1.save('your_file.mp3')
       audio_file = open('your_file.mp3', 'rb')
@@ -42,7 +42,7 @@ if language == 'Русский':
     with col1:
       st.write(sentence2)
     with col2:
-      st.write(translation2)
+      st.write("2. ", translation2)
       tts1=gTTS(translation2, lang = 'it')
       tts1.save('your_file.mp3')
       audio_file = open('your_file.mp3', 'rb')
@@ -54,7 +54,7 @@ if language == 'Русский':
     with col1:  
       st.write(sentence3)
     with col2:           
-      st.write(translation3)
+      st.write("3. ", translation3)
       tts1=gTTS(translation3, lang = 'it')
       tts1.save('your_file.mp3')
       audio_file = open('your_file.mp3', 'rb')
@@ -65,7 +65,7 @@ if language == 'Русский':
     with col1:  
       st.write(sentence4)
     with col2:           
-      st.write(translation4)
+      st.write("4. ", translation4)
       tts1=gTTS(translation4, lang = 'it')
       tts1.save('your_file.mp3')
       audio_file = open('your_file.mp3', 'rb')
