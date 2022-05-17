@@ -12,5 +12,5 @@ if language == 'Русский':
   if placechoice == 'Площадка для игр':
     st.header("Русский")
     text = 'Andiamo a giocare a nascondino'
-    st.write(translit(text, 'ru'))
+    st.write(translit(text, 'uk'))
    
