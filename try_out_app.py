@@ -1,7 +1,7 @@
 import streamlit as st
 from PIL import Image
 from gtts import gTTS
-
+from google.transliteration import transliterate_text
 
 st.title("Итальянский разговорник для детей - Італійський розмовник для дітей")
 
@@ -19,12 +19,13 @@ if language == 'Русский':
       
     with col2:
       st.header("Итальянский")
-      textpl1 = "_Andiamo al parco_"
-      st.write(" 1.", textpl1)
+      textpl1 = "Andiamo al parco"
+      st.write(" 1.", textpl1, )
       tts1=gTTS(textpl1, lang = 'it')
       tts1.save('your_file.mp3')
       audio_file = open('your_file.mp3', 'rb')
       st.audio(data=audio_file, format="audio/mp3", start_time = 0)
+      
       
     with col1:
       st.write("2. Давай играть в прятки")
@@ -35,6 +36,9 @@ if language == 'Русский':
       tts1.save('your_file.mp3')
       audio_file = open('your_file.mp3', 'rb')
       st.audio(data=audio_file, format="audio/mp3", start_time = 0)
+      result = transliterate_text(textpl2,  "ru")
+      st.write(result)
+
       
     with col1:  
       st.write("3. Давай покатаемся на качелях")
