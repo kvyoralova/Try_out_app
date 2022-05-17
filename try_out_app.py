@@ -1,7 +1,7 @@
 import streamlit as st
 from PIL import Image
 from gtts import gTTS
-from google.transliteration import transliterate_text
+#from google.transliteration import transliterate_text
 from transliterate import translit, get_available_language_codes
 
 
@@ -50,8 +50,8 @@ if language == 'Русский':
       tts1.save('your_file.mp3')
       audio_file = open('your_file.mp3', 'rb')
       st.audio(data=audio_file, format="audio/mp3", start_time = 0)
-      result3 = transliterate_text(textpl3,  "ru")
-      st.write(result3)
+      #result3 = transliterate_text(textpl3,  "ru")
+      #st.write(result3)
   
 if language == 'Yкраїнський':
   placecoicheuk = st.selectbox("Куди ти хочеш піти сьогодні? Bыбери одно з вказаних місць:", ('Майданчик для ігор', 'Школа', 'Магазин'))
