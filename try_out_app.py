@@ -15,12 +15,14 @@ if language == 'Русский':
     col1, col2 = st.columns(2)
     with col1:
       st.header("Русский")
-      st.write("1. Пойдем в парк", 
-               "2. Давай играть в прятки",
-              "3.Давай покатаемся на качелях")
+      st.write("1. Пойдем в парк"
+               
+               "2. Давай играть в прятки"
+               
+              "3. Давай покатаемся на качелях")
     with col2:
-      text = "Andiamo al parco"
-      tts1=gTTS(text, lang = it)
+      text1 = "Andiamo al parco"
+      tts1=gTTS(text1, lang = 'it')
       tts1.save('your_file.mp3')
       audio_file = open('your_file.mp3', 'rb')
       st.audio(data=audio_file, format="audio/mp3", start_time = 0)
