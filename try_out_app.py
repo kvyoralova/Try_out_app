@@ -26,7 +26,7 @@ if language == 'Русский':
       audio_file = open('your_file.mp3', 'rb')
       st.audio(data=audio_file, format="audio/mp3", start_time = 0)
       result1 = transliterate_text(textpl1,  "ru")
-      st.write("_"result1"_")
+      st.write(result1)
       
       
     with col1:
