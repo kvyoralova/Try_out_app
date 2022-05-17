@@ -71,8 +71,8 @@ if language == 'Русский':
       tts1.save('your_file.mp3')
       audio_file = open('your_file.mp3', 'rb')
       st.audio(data=audio_file, format="audio/mp3", start_time = 0)
-      result3 = transliterate_text(translation4,  "ru")
-      st.write(result3)
+      result4 = transliterate_text(translation4,  "ru")
+      st.write(result4)
   
 if language == 'Yкраїнський':
   placecoicheuk = st.selectbox("Куди ти хочеш піти сьогодні? Bыбери одно з вказаних місць:", ('Майданчик для ігор', 'Школа', 'Магазин'))
@@ -126,7 +126,8 @@ if language == 'Yкраїнський':
       tts1.save('your_file.mp3')
       audio_file = open('your_file.mp3', 'rb')
       st.audio(data=audio_file, format="audio/mp3", start_time = 0)
-      result3 = transliterate_text(translation4,  "uk")
+      result4 = transliterate_text(translation4,  "uk")
+      st.write(result4)
     
   
     
