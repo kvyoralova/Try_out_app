@@ -17,7 +17,7 @@ if language == 'Русский':
     sentence1 = "1. Пойдем в парк" 
     sentence2 = "2. Давай играть в прятки"
     sentence3 = "3. Давай покатаемся на качелях"
-    sentence4 = "4. Пойдемте на горку"
+    sentence4 = "4. Пойдем на горку"
     translation1 = "Andiamo al parco"
     translation2 = "Giochiamo a nascondino"
     translation3 = "Andiamo sull'altalena"
@@ -78,6 +78,53 @@ if language == 'Yкраїнський':
   if placecoicheuk == 'Майданчик для ігор':
     image1 = Image.open('playground.jpg')
     st.image(image1, caption='Photo by Pond Juprasong on Unsplash')
-    st.write("1. Давайте пограємо в хованки")
+    sentence1uk = "1. Підемо в парк"
+    sentence2uk = "2. Давайте пограємо в хованки"
+    sentence3uk = "3. Давай покатаємося на гойдалках"
+    sentence4uk = "4. Підемо на гірку"
+    
+    with col1:
+      st.write(sentence1uk)
+    with col2:           
+      st.write("1. ", translation1)
+      tts1=gTTS(translation1, lang = 'it')
+      tts1.save('your_file.mp3')
+      audio_file = open('your_file.mp3', 'rb')
+      st.audio(data=audio_file, format="audio/mp3", start_time = 0)
+      result1 = transliterate_text(translation1,  "uk")
+      st.write(result1)
+      
+    with col1:
+      st.write(sentence2uk)
+    with col2:
+      st.write("2. ", translation2)
+      tts1=gTTS(translation2, lang = 'it')
+      tts1.save('your_file.mp3')
+      audio_file = open('your_file.mp3', 'rb')
+      st.audio(data=audio_file, format="audio/mp3", start_time = 0)
+      result2 = transliterate_text(translation2,  "uk")
+      st.write(result2)
+      
+    with col1:
+      st.write(sentence3uk)
+    with col2:           
+      st.write("3. ", translation3)
+      tts1=gTTS(translation3, lang = 'it')
+      tts1.save('your_file.mp3')
+      audio_file = open('your_file.mp3', 'rb')
+      st.audio(data=audio_file, format="audio/mp3", start_time = 0)
+      result3 = transliterate_text(translation3,  "uk")
+      st.write(result3)
+     
+    with col1:
+      st.write(sentence4uk)
+    with col2:           
+      st.write("4. ", translation4)
+      tts1=gTTS(translation4, lang = 'it')
+      tts1.save('your_file.mp3')
+      audio_file = open('your_file.mp3', 'rb')
+      st.audio(data=audio_file, format="audio/mp3", start_time = 0)
+      result3 = transliterate_text(translation4,  "uk")
+    
   
     
