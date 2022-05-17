@@ -14,10 +14,11 @@ if language == 'Русский':
   if placechoice == 'Площадка для игр':
     image1 = Image.open('playground.jpg')
     st.image(image1, caption='Photo by Pond Juprasong on Unsplash')
+    sentence1 = "1. Пойдем в парк" 
     col1, col2 = st.columns(2)
     with col1:
       st.header("Русский")
-      st.write("1. Пойдем в парк")
+      st.write(sentence1)
       
     with col2:
       st.header("Итальянский")
@@ -28,7 +29,6 @@ if language == 'Русский':
       audio_file = open('your_file.mp3', 'rb')
       st.audio(data=audio_file, format="audio/mp3", start_time = 0)
       st.write(translit(textpl, 'ru')
-      
       
     with col1:
       st.write("2. Давай играть в прятки")
