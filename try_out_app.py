@@ -40,7 +40,6 @@ if language == 'Русский':
       audio_file = open('your_file.mp3', 'rb')
       st.audio(data=audio_file, format="audio/mp3", start_time = 0)
       st.write(translit(textpl2 'ru')
-
       
     with col1:  
       st.write("3. Давай покатаемся на качелях")
