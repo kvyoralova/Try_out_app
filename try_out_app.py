@@ -15,15 +15,25 @@ if language == 'Русский':
     col1, col2 = st.columns(2)
     with col1:
       st.header("Русский")
-      st.write("1. Пойдем в парк"
+      st.write("1. Пойдем в парк")
+      st.write("2. Давай играть в прятки")
+      st.writee("3. Давай покатаемся на качелях")
                
-               "2. Давай играть в прятки"
-               
-              "3. Давай покатаемся на качелях")
+              
     with col2:
       st.header("Итальянский")
       text1 = "Andiamo al parco"
       tts1=gTTS(text1, lang = 'it')
+      tts1.save('your_file.mp3')
+      audio_file = open('your_file.mp3', 'rb')
+      st.audio(data=audio_file, format="audio/mp3", start_time = 0)
+      text2 = "Giochiamo a nascondino"
+      tts1=gTTS(text2, lang = 'it')
+      tts1.save('your_file.mp3')
+      audio_file = open('your_file.mp3', 'rb')
+      st.audio(data=audio_file, format="audio/mp3", start_time = 0)
+      text3 = "Andiamo sull'altalena"
+      tts1=gTTS(text3, lang = 'it')
       tts1.save('your_file.mp3')
       audio_file = open('your_file.mp3', 'rb')
       st.audio(data=audio_file, format="audio/mp3", start_time = 0)
