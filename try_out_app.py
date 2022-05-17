@@ -19,8 +19,8 @@ if language == 'Русский':
       
     with col2:
       st.header("Итальянский")
-      st.write("1. Andiamo al parco")
       text1 = "Andiamo al parco"
+      st.write(text1)
       tts1=gTTS(text1, lang = 'it')
       tts1.save('your_file.mp3')
       audio_file = open('your_file.mp3', 'rb')
