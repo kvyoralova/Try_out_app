@@ -82,7 +82,6 @@ if language == 'Yкраїнський':
     sentence2uk = "2. Давайте пограємо в хованки"
     sentence3uk = "3. Давай покатаємося на гойдалках"
     sentence4uk = "4. Підемо на гірку"
-    
     with col1:
       st.write(sentence1uk)
     with col2:           
