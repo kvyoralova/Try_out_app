@@ -82,9 +82,11 @@ if language == 'Yкраїнський':
     sentence2uk = "2. Давайте пограємо в хованки"
     sentence3uk = "3. Давай покатаємося на гойдалках"
     sentence4uk = "4. Підемо на гірку"
-    with col1:
+    
+    col3, col4 = st.columns(2)
+    with col3:
       st.write(sentence1uk)
-    with col2:           
+    with col4:           
       st.write("1. ", translation1)
       tts1=gTTS(translation1, lang = 'it')
       tts1.save('your_file.mp3')
@@ -93,9 +95,9 @@ if language == 'Yкраїнський':
       result1 = transliterate_text(translation1,  "uk")
       st.write(result1)
       
-    with col1:
+    with col3:
       st.write(sentence2uk)
-    with col2:
+    with col4:
       st.write("2. ", translation2)
       tts1=gTTS(translation2, lang = 'it')
       tts1.save('your_file.mp3')
@@ -104,9 +106,9 @@ if language == 'Yкраїнський':
       result2 = transliterate_text(translation2,  "uk")
       st.write(result2)
       
-    with col1:
+    with col3:
       st.write(sentence3uk)
-    with col2:           
+    with col4:           
       st.write("3. ", translation3)
       tts1=gTTS(translation3, lang = 'it')
       tts1.save('your_file.mp3')
@@ -115,9 +117,9 @@ if language == 'Yкраїнський':
       result3 = transliterate_text(translation3,  "uk")
       st.write(result3)
      
-    with col1:
+    with col3:
       st.write(sentence4uk)
-    with col2:           
+    with col4:           
       st.write("4. ", translation4)
       tts1=gTTS(translation4, lang = 'it')
       tts1.save('your_file.mp3')
