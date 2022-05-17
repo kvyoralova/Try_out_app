@@ -11,6 +11,6 @@ if language == 'Русский':
   placechoice = st.selectbox("Куда ты хочешь пойти сегодня? Bыбери одно из указанных мест:", ('Площадка для игр', 'Школа', 'Магазин'))
   if placechoice == 'Площадка для игр':
     st.header("Русский")
-    text = 'Andiamo a giocare a nascondino'
+    text = "Andiamo sull'altalena"
     st.write(translit(text, 'uk'))
    
