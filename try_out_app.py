@@ -19,9 +19,9 @@ if language == 'Русский':
       
     with col2:
       st.header("Итальянский")
-      text1 = "Andiamo al parco"
-      st.write(text1)
-      tts1=gTTS(text1, lang = 'it')
+      textpl1 = "Andiamo al parco"
+      st.write(textpl1)
+      tts1=gTTS(textpl1, lang = 'it')
       tts1.save('your_file.mp3')
       audio_file = open('your_file.mp3', 'rb')
       st.audio(data=audio_file, format="audio/mp3", start_time = 0)
@@ -29,9 +29,9 @@ if language == 'Русский':
     with col1:
       st.write("2. Давай играть в прятки")
     with col2:
-      st.write("2. Giochiamo a nascondino")
-      text2 = "Giochiamo a nascondino"
-      tts1=gTTS(text2, lang = 'it')
+      textpl2 = "Giochiamo a nascondino"
+      st.write(textpl2)
+      tts1=gTTS(textpl2, lang = 'it')
       tts1.save('your_file.mp3')
       audio_file = open('your_file.mp3', 'rb')
       st.audio(data=audio_file, format="audio/mp3", start_time = 0)
@@ -39,9 +39,9 @@ if language == 'Русский':
     with col1:  
       st.write("3. Давай покатаемся на качелях")
     with col2:           
-      st.write("3. Andiamo sull'altalena")
-      text3 = "Andiamo sull'altalena"
-      tts1=gTTS(text3, lang = 'it')
+      textpl3 = "Andiamo sull'altalena"
+      st.write(textpl3)
+      tts1=gTTS(textpl3, lang = 'it')
       tts1.save('your_file.mp3')
       audio_file = open('your_file.mp3', 'rb')
       st.audio(data=audio_file, format="audio/mp3", start_time = 0)
