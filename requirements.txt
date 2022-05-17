@@ -1,2 +1,3 @@
 gTTS
 click<=8.0.4
+google-transliteration-api
