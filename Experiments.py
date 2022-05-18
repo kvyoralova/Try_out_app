@@ -4,7 +4,7 @@ from gtts import gTTS
 from googletrans import Translator
 from google.transliteration import transliterate_text
 translator = Translator()
-#from transliterate import translit, get_available_language_codes
+from transliterate import translit, get_available_language_codes
 
 
 st.title("Італійський розмовник для дітей - Итальянский разговорник для детей")
