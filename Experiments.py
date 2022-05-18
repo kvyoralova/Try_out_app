@@ -11,9 +11,9 @@ st.title("Італійський розмовник для дітей - Итал
 
 language = st.radio( "Виберіть мову - Выберите язык" , ('Русский', 'Yкраїнський'))
 #translation1 = "Andiamo al parco"
-#translation2 = "Giochiamo a nascondino"
-#translation3 = "Andiamo sull'altalena"
-#translation4 = "Andiamo sullo scivolo"
+translation2 = "Giochiamo a nascondino"
+translation3 = "Andiamo sull'altalena"
+translation4 = "Andiamo sullo scivolo"
     
 
 if language == 'Русский':
