@@ -30,6 +30,6 @@ st.write(get_available_language_codes())
 
 # ['el', 'hy', 'ka', 'ru', 'example']
 
-st.write(translit(text, 'example'))
+st.write(translit("scivolo"))
 
 # Lor5m 9psum 4olor s9t 1m5t
