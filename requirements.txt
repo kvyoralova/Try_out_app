@@ -1,4 +1,4 @@
 gTTS
 click<=8.0.4
 google-transliteration-api
-https://github.com/barseghyanartur/transliterate/archive/stable.tar.gz
+transliterate
