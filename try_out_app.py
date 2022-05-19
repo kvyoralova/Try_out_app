@@ -78,6 +78,9 @@ if language == 'Русский':
       result4 = translit(translation4,  "ru")
       st.write(result4)
   if placechoice == 'Школа':
+    image2 = Image.open('school.jpg')
+    st.image(image2, caption='Photo by Kenny Eliason on Unsplash')
+    sentence6 = '
     
   
 if language == 'Yкраїнський':
