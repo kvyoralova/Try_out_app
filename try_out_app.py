@@ -34,7 +34,7 @@ if language == 'Русский':
       st.header("Итальянский")
       #st.write("1. ", translation1)
       translator = Translator()
-      translation1 = translator.translate(sentence1, src=‘ru’ dest='it')
+      translation1 = translator.translate(sentence1, src='ru', dest='it')
       st.write(transToItalian)
       tts1=gTTS(translation1, lang = 'it')
       tts1.save('your_file.mp3')
