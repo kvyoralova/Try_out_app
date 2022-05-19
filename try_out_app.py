@@ -139,7 +139,7 @@ if language == 'Yкраїнський':
       st.audio(data=audio_file, format="audio/mp3", start_time = 0)
       result4 = translit(translation4,  "uk")
       st.write(result4)
-  if placechoice == 'Школа':
+  if placechoiceuk == 'Школа':
     image2 = Image.open('school.jpg')
     st.image(image2, caption='Photo by Kenny Eliason on Unsplash')  
     
