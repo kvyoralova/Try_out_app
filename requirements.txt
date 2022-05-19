@@ -1,5 +1,5 @@
 gTTS
 click<=8.0.4
-google-transliteration-api
+#google-transliteration-api
 transliterate
 googletrans==4.0.0-rc1
