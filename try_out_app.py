@@ -80,7 +80,7 @@ if language == 'Русский':
   if placechoice == 'Школа':
     image2 = Image.open('school.jpg')
     st.image(image2, caption='Photo by Kenny Eliason on Unsplash')
-    sentence6 = '
+    #sentence6 = '
     
   
 if language == 'Yкраїнський':
