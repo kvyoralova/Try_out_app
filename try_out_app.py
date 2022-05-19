@@ -90,8 +90,10 @@ if language == 'Yкраїнський':
     
     col3, col4 = st.columns(2)
     with col3:
+      st.header("Yкраїнський")
       st.write(sentence1uk)
-    with col4:           
+    with col4:
+      st.header("Італійський")
       st.write("1. ", translation1)
       tts1=gTTS(translation1, lang = 'it')
       tts1.save('your_file.mp3')
