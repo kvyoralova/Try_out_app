@@ -41,7 +41,7 @@ if language == 'Русский':
       audio_file = open('your_file.mp3', 'rb')
       st.audio(data=audio_file, format="audio/mp3", start_time = 0)
       #st.write(translit(textpl1, 'ru')
-      result1 = transliterate_text(translation1,  "ru")
+      result1 = translit(translation1,  "ru")
       st.write(result1)
       
     with col1:
@@ -52,7 +52,7 @@ if language == 'Русский':
       tts1.save('your_file.mp3')
       audio_file = open('your_file.mp3', 'rb')
       st.audio(data=audio_file, format="audio/mp3", start_time = 0)
-      result2 = transliterate_text(translation2,  "ru")
+      result2 = translit(translation2,  "ru")
       st.write(result2)
       #st.write(translit(textpl2 'ru')
       
@@ -64,7 +64,7 @@ if language == 'Русский':
       tts1.save('your_file.mp3')
       audio_file = open('your_file.mp3', 'rb')
       st.audio(data=audio_file, format="audio/mp3", start_time = 0)
-      result3 = transliterate_text(translation3,  "ru")
+      result3 = translit(translation3,  "ru")
       st.write(result3)
       
     with col1:  
@@ -75,7 +75,7 @@ if language == 'Русский':
       tts1.save('your_file.mp3')
       audio_file = open('your_file.mp3', 'rb')
       st.audio(data=audio_file, format="audio/mp3", start_time = 0)
-      result4 = transliterate_text(translation4,  "ru")
+      result4 = translit(translation4,  "ru")
       st.write(result4)
   
 if language == 'Yкраїнський':
@@ -97,7 +97,7 @@ if language == 'Yкраїнський':
       tts1.save('your_file.mp3')
       audio_file = open('your_file.mp3', 'rb')
       st.audio(data=audio_file, format="audio/mp3", start_time = 0)
-      result1 = transliterate_text(translation1,  "uk")
+      result1 = translit(translation1,  "uk")
       st.write(result1)
       
     with col3:
@@ -108,7 +108,7 @@ if language == 'Yкраїнський':
       tts1.save('your_file.mp3')
       audio_file = open('your_file.mp3', 'rb')
       st.audio(data=audio_file, format="audio/mp3", start_time = 0)
-      result2 = transliterate_text(translation2,  "uk")
+      result2 = translit(translation2,  "uk")
       st.write(result2)
       
     with col3:
@@ -119,7 +119,7 @@ if language == 'Yкраїнський':
       tts1.save('your_file.mp3')
       audio_file = open('your_file.mp3', 'rb')
       st.audio(data=audio_file, format="audio/mp3", start_time = 0)
-      result3 = transliterate_text(translation3,  "uk")
+      result3 = translit(translation3,  "uk")
       st.write(result3)
      
     with col3:
@@ -130,7 +130,7 @@ if language == 'Yкраїнський':
       tts1.save('your_file.mp3')
       audio_file = open('your_file.mp3', 'rb')
       st.audio(data=audio_file, format="audio/mp3", start_time = 0)
-      result4 = transliterate_text(translation4,  "uk")
+      result4 = translit(translation4,  "uk")
       st.write(result4)
     
   
