@@ -84,8 +84,8 @@ if language == 'Русский':
     
   
 if language == 'Yкраїнський':
-  placechoicheuk = st.selectbox("Куди ти хочеш піти сьогодні? Bыбери одно з вказаних місць:", ('Майданчик для ігор', 'Школа', 'Магазин'))
-  if placechoicheuk == 'Майданчик для ігор':
+  placechoiceuk = st.selectbox("Куди ти хочеш піти сьогодні? Bыбери одно з вказаних місць:", ('Майданчик для ігор', 'Школа', 'Магазин'))
+  if placechoiceuk == 'Майданчик для ігор':
     image1 = Image.open('playground.jpg')
     st.image(image1, caption='Photo by Pond Juprasong on Unsplash')
     sentence1uk = "1. Підемо в парк"
