@@ -77,6 +77,8 @@ if language == 'Русский':
       st.audio(data=audio_file, format="audio/mp3", start_time = 0)
       result4 = translit(translation4,  "ru")
       st.write(result4)
+  if placechoice == 'Школа':
+    
   
 if language == 'Yкраїнський':
   placecoicheuk = st.selectbox("Куди ти хочеш піти сьогодні? Bыбери одно з вказаних місць:", ('Майданчик для ігор', 'Школа', 'Магазин'))
