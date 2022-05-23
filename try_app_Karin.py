@@ -21,10 +21,10 @@ def trans(sentence):
     lan = 'ru'
   elif language == 'Yкраїнський':
     lan = 'uk'
-  result = translit(translation, lan)
-  st.write(result)
   else:
     pass
+  result = translit(translation, lan)
+  st.write(result)
     
 
 if language == 'Русский':
