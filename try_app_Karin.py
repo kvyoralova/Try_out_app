@@ -23,7 +23,7 @@ def trans(sentence):
     lan = 'uk'
   result = translit(translation, lan)
   st.write(result)
-  esle:
+  else:
     pass
     
 
