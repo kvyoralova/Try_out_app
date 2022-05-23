@@ -12,7 +12,8 @@ language = st.radio( "Виберіть мову - Выберите язык" , (
 
 def trans(sentence):
   translation = translator.translate(sentence, dest='it')
-  st.write(translation.text)
+  translation = translation.text
+  st.write(translation)
   tts1=gTTS(translation, lang = 'it')
   tts1.save('your_file.mp3')
   audio_file = open('your_file.mp3', 'rb')
