@@ -19,10 +19,12 @@ def trans(sentence):
   st.audio(data=audio_file, format="audio/mp3", start_time = 0)
   if language == 'Русский':
     lan = 'ru'
-  elif language == 'Yкраїнський'
+  elif language == 'Yкраїнський':
     lan = 'uk'
   result = translit(translation, lan)
   st.write(result)
+  esle:
+    pass
     
 
 if language == 'Русский':
