@@ -10,7 +10,7 @@ from transliterate import translit, get_available_language_codes
 st.title("Італійський розмовник для дітей - Итальянский разговорник для детей")
 
 language = st.radio( "Виберіть мову - Выберите язык" , ('Русский', 'Yкраїнський'))
-translation1 = "Andiamo al parco"
+#translation1 = "Andiamo al parco"
 translation2 = "Giochiamo a nascondino"
 translation3 = "Andiamo sull'altalena"
 translation4 = "Andiamo sullo scivolo"
@@ -33,9 +33,8 @@ if language == 'Русский':
       
     with col2:
       st.header("Итальянский")
-      st.write("1. ", translation1)
-      #translation1 = translator.translate(sentence1, src='ru', dest='it')
-      #st.text(translation1)
+      translation1 = translator.translate(sentence1, src='ru', dest='it')
+      st.write(translation1)
       tts1=gTTS(translation1, lang = 'it')
       tts1.save('your_file.mp3')
       audio_file = open('your_file.mp3', 'rb')
