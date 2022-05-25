@@ -75,7 +75,7 @@ if language == 'Yкраїнський':
     st.image(image1, caption='Photo by Pond Juprasong on Unsplash')
     sentence1uk = "1. Підемо в парк"
     sentence2uk = "2. Давай пограємо в хованки"
-    sentence3uk = "3. Давай покатаємося на гойдалках"
+    sentence3uk = "3. Xодімо на гойдалки"
     sentence4uk = "4. Підемо на гірку"
     
     col3, col4 = st.columns(2)
