@@ -52,7 +52,7 @@ if language == 'Русский':
     sentence1 = "Пойдем в парк" 
     sentence2 = "Давай играть в прятки"
     sentence3 = "Давай покатаемся на качелях"
-    sentence4 = "Пойдем на горки"
+    sentence4 = "Пойдем на горку"
     
     phrasebook(sentence1)
     phrasebook(sentence2)
@@ -94,7 +94,7 @@ if language == 'Yкраїнський':
     sentence1uk = "Підемо в парк"
     sentence2uk = "Давай пограємо в хованки"
     sentence3uk = "Xодімо на гойдалки"
-    sentence4uk = "Підемо на гірки"
+    sentence4uk = "Підемо на гірку"
     
     cola, colb, colc, cold = st.columns(4)
     with cola:
