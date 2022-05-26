@@ -12,21 +12,17 @@ language = st.radio( "Виберіть мову - Выберите язык" , (
 def phrasebook(sentence):
   col1, col2, col3, col4 = st.columns(4)
   with col1:
-    st.subheader("Полезные выражения")
     st.write(sentence)
   with col2:
-    st.subheader("Итальянский перевод")
     translation = translator.translate(sentence, dest='it')
     translation = translation.text
     st.write(translation)
   with col3:
-    st.subheader("Вот как это звучит")
     tts1=gTTS(translation, lang = 'it')
     tts1.save('your_file.mp3')
     audio_file = open('your_file.mp3', 'rb')
     st.audio(data=audio_file, format="audio/mp3", start_time = 0)
   with col4:
-    st.subheader("На кириллице")
     if language == 'Русский':
       lan = 'ru'
     elif language == 'Yкраїнський':
@@ -42,6 +38,17 @@ if language == 'Русский':
   if placechoice == 'Площадка для игр':
     image1 = Image.open('playground.jpg')
     st.image(image1, caption='Photo by Pond Juprasong on Unsplash')
+    col1, col2, col3, col4 = columns(4)
+    with col1:
+      st.subheader("Полезные выражения")
+    with col2:
+      st.subheader("Итальянский перевод")
+    with col3:
+      st.subheader("Вот как это звучит")
+    with col4:
+      st.subheader("На кириллице")
+      
+      
     sentence1 = "Пойдем в парк" 
     sentence2 = "Давай играть в прятки"
     sentence3 = "Давай покатаемся на качелях"
