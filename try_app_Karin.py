@@ -10,7 +10,7 @@ st.title("Італійський розмовник для дітей - Итал
 language = st.radio( "Виберіть мову - Выберите язык" , ('Русский', 'Yкраїнський'))
 
 def trans(sentence):
-  col2, col3, col4 = st.column(3)
+  col2, col3, col4 = st.columns(3)
   with col2:
     translation = translator.translate(sentence, dest='it')
     translation = translation.text
