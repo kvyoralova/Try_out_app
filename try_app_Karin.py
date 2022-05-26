@@ -86,15 +86,30 @@ if language == 'Русский':
     #sentence6 = '
     
   
-#if language == 'Yкраїнський':
- # placechoiceuk = st.selectbox("Куди ти хочеш піти сьогодні? Bыбери одно з вказаних місць:", ('Майданчик для ігор', 'Школа', 'Магазин'))
-  #if placechoiceuk == 'Майданчик для ігор':
-   # image1 = Image.open('playground.jpg')
-    #st.image(image1, caption='Photo by Pond Juprasong on Unsplash')
-    #sentence1uk = "1. Підемо в парк"
-    #sentence2uk = "2. Давай пограємо в хованки"
-    #sentence3uk = "3. Xодімо на гойдалки"
-    #sentence4uk = "4. Підемо на гірку"
+if language == 'Yкраїнський':
+  placechoiceuk = st.selectbox("Куди ти хочеш піти сьогодні? Bыбери одно з вказаних місць:", ('Майданчик для ігор', 'Школа', 'Магазин'))
+  if placechoiceuk == 'Майданчик для ігор':
+    image1 = Image.open('playground.jpg')
+    st.image(image1, caption='Photo by Pond Juprasong on Unsplash')
+    sentence1uk = "1. Підемо в парк"
+    sentence2uk = "2. Давай пограємо в хованки"
+    sentence3uk = "3. Xодімо на гойдалки"
+    sentence4uk = "4. Підемо на гірку"
+    
+    cola, colb, colc, cold = st.columns(4)
+     with cola:
+      st.subheader("Корисні вирази")
+    with colb:
+      st.subheader("Італійський переклад")
+    with colc:
+      st.subheader("От як це звучить")
+    with cold:
+      st.subheader("На кирилиці")
+    
+    phrasebook(sentence1uk)
+    phrasebook(sentence2uk)
+    phrasebook(sentence3uk)
+    phrasebook(sentence4uk)
     
     #col3, col4 = st.columns(2)
     #with col3:
