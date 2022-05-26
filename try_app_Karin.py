@@ -38,7 +38,7 @@ if language == 'Русский':
   if placechoice == 'Площадка для игр':
     image1 = Image.open('playground.jpg')
     st.image(image1, caption='Photo by Pond Juprasong on Unsplash')
-    cola, colb, colc, cold = columns(4)
+    cola, colb, colc, cold = st.columns(4)
     with cola:
       st.subheader("Полезные выражения")
     with colb:
