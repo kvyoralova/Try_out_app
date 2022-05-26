@@ -14,7 +14,7 @@ def trans(sentence):
   translation = translation.text
   st.write(translation)
  
-def audio(text)
+def audio(text):
   tts1=gTTS(translation, lang = 'it')
   tts1.save('your_file.mp3')
   audio_file = open('your_file.mp3', 'rb')
