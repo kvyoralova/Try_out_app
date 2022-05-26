@@ -12,28 +12,28 @@ language = st.radio( "Виберіть мову - Выберите язык" , (
 def phrasebook(sentence):
   col1, col2, col3, col4 = st.columns(4)
   with col1:
-    st.header("Полезные выражения")
+    st.subheader("Полезные выражения")
     st.write(sentence)
   with col2:
-    st.header("Итальянский")
+    st.subheader("Итальянский")
     translation = translator.translate(sentence, dest='it')
     translation = translation.text
     st.write(translation)
   with col3:
-    st.header("Вот как это звучит")
+    st.subheader("Вот как это звучит")
     tts1=gTTS(translation, lang = 'it')
     tts1.save('your_file.mp3')
     audio_file = open('your_file.mp3', 'rb')
     st.audio(data=audio_file, format="audio/mp3", start_time = 0)
   with col4:
-    st.header("На кириллице")
+    st.subheader("На кириллице")
     if language == 'Русский':
       lan = 'ru'
     elif language == 'Yкраїнський':
       lan = 'uk'
     else:
       pass
-    translit(translation, lan)
+    result = translit(translation, lan)
     st.write(result)
   
 
