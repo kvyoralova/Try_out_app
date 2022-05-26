@@ -48,6 +48,9 @@ if language == 'Русский':
     sentence4 = "Пойдем на горку"
     
     phrasebook(sentence1)
+    phrasebook(sentence2)
+    phrasebook(sentence3)
+    phrasebook(sentence4)
     
     #col1, col2, col3, col4 = st.columns(4)
     #with col1:
