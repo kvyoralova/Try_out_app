@@ -15,7 +15,7 @@ def phrasebook(sentence):
     st.subheader("Полезные выражения")
     st.write(sentence)
   with col2:
-    st.subheader("Итальянский")
+    st.subheader("Итальянский перевод")
     translation = translator.translate(sentence, dest='it')
     translation = translation.text
     st.write(translation)
