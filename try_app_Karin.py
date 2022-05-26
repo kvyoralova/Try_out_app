@@ -9,27 +9,32 @@ st.title("Італійський розмовник для дітей - Итал
 
 language = st.radio( "Виберіть мову - Выберите язык" , ('Русский', 'Yкраїнський'))
 
-def trans(sentence):
-  translation = translator.translate(sentence, dest='it')
-  translation = translation.text
-  st.write(translation)
- 
-def audio(text):
-  tts1=gTTS(translation, lang = 'it')
-  tts1.save('your_file.mp3')
-  audio_file = open('your_file.mp3', 'rb')
-  st.audio(data=audio_file, format="audio/mp3", start_time = 0)
-  
-  
-def tranllit(translation):
-  if language == 'Русский':
-    lan = 'ru'
-  elif language == 'Yкраїнський':
-    lan = 'uk'
-  else:
-    pass
-  translit(translation, lan)
-  st.write(result)
+def phrasebook(sentence):
+  col1, col2, col3, col4 = st.columns(4)
+  with col1:
+    st.header("Полезные выражения")
+    st.write(sentence)
+  with col2:
+    st.header("Итальянский")
+    translation = translator.translate(sentence, dest='it')
+    translation = translation.text
+    st.write(translation)
+  with col3:
+    st.header("Вот как это звучит")
+    tts1=gTTS(translation, lang = 'it')
+    tts1.save('your_file.mp3')
+    audio_file = open('your_file.mp3', 'rb')
+    st.audio(data=audio_file, format="audio/mp3", start_time = 0)
+  with col4:
+    st.header("На кириллице")
+    if language == 'Русский':
+      lan = 'ru'
+    elif language == 'Yкраїнський':
+      lan = 'uk'
+    else:
+      pass
+    translit(translation, lan)
+    st.write(result)
   
 
 if language == 'Русский':
@@ -42,20 +47,20 @@ if language == 'Русский':
     sentence3 = "Давай покатаемся на качелях"
     sentence4 = "Пойдем на горку"
     
-    col1, col2, col3, col4 = st.columns(4)
-    with col1:
-      st.header("Русский")
-      st.write(sentence1)
+    #col1, col2, col3, col4 = st.columns(4)
+    #with col1:
+     # st.header("Русский")
+      #st.write(sentence1)
       
-    with col2:
-      st.header("Итальянский")
-      trans(sentence1)
+    #with col2:
+     # st.header("Итальянский")
+      #trans(sentence1)
       
-    with col3:
-      aduio(sentence1)
+    #with col3:
+     # aduio(sentence1)
       
-    with col4:  
-      tranllit(sentence3)
+    #with col4:  
+     # tranllit(sentence3)
  
       
    # with col1:  
