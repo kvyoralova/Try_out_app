@@ -47,6 +47,8 @@ if language == 'Русский':
     sentence3 = "Давай покатаемся на качелях"
     sentence4 = "Пойдем на горку"
     
+    phrasebook(sentence1)
+    
     #col1, col2, col3, col4 = st.columns(4)
     #with col1:
      # st.header("Русский")
