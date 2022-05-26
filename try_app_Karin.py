@@ -58,31 +58,10 @@ if language == 'Русский':
     phrasebook(sentence2)
     phrasebook(sentence3)
     phrasebook(sentence4)
-    
-    #col1, col2, col3, col4 = st.columns(4)
-    #with col1:
-     # st.header("Русский")
-      #st.write(sentence1)
       
-    #with col2:
-     # st.header("Итальянский")
-      #trans(sentence1)
-      
-    #with col3:
-     # aduio(sentence1)
-      
-    #with col4:  
-     # tranllit(sentence3)
- 
-      
-   # with col1:  
-    #  st.write(sentence4)
-    #with col2:           
-     # trans(sentence4)
-      
-  #if placechoice == 'Школа':
-   # image2 = Image.open('school.jpg')
-    #st.image(image2, caption='Photo by Kenny Eliason on Unsplash')
+  if placechoice == 'Школа':
+    image2 = Image.open('school.jpg')
+    st.image(image2, caption='Photo by Kenny Eliason on Unsplash')
     #sentence6 = '
     
   
@@ -110,29 +89,7 @@ if language == 'Yкраїнський':
     phrasebook(sentence2uk)
     phrasebook(sentence3uk)
     phrasebook(sentence4uk)
-    
-    #col3, col4 = st.columns(2)
-    #with col3:
-     # st.header("Yкраїнський")
-      #st.write(sentence1uk)
-    #with col4:
-     # st.header("Італійський")
-      #trans(sentence1uk)
-      
-    #with col3:
-     # st.write(sentence2uk)
-    #with col4:
-     # trans(sentence2uk)
-      
-    #with col3:
-     # st.write(sentence3uk)
-    #with col4:           
-     # trans(sentence3uk)
-     
-    #with col3:
-     # st.write(sentence4uk)
-    #with col4:           
-     # trans(sentence4uk)
-  #if placechoiceuk == 'Школа':
-   # image2 = Image.open('school.jpg')
-    #st.image(image2, caption='Photo by Kenny Eliason on Unsplash') 
+
+  if placechoiceuk == 'Школа':
+    image2 = Image.open('school.jpg')
+    st.image(image2, caption='Photo by Kenny Eliason on Unsplash') 
