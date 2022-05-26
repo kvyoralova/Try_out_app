@@ -38,14 +38,14 @@ if language == 'Русский':
   if placechoice == 'Площадка для игр':
     image1 = Image.open('playground.jpg')
     st.image(image1, caption='Photo by Pond Juprasong on Unsplash')
-    col1, col2, col3, col4 = columns(4)
-    with col1:
+    cola, colb, colc, cold = columns(4)
+    with cola:
       st.subheader("Полезные выражения")
-    with col2:
+    with colb:
       st.subheader("Итальянский перевод")
-    with col3:
+    with colc:
       st.subheader("Вот как это звучит")
-    with col4:
+    with cold:
       st.subheader("На кириллице")
       
       
