@@ -91,10 +91,10 @@ if language == 'Yкраїнський':
   if placechoiceuk == 'Майданчик для ігор':
     image1 = Image.open('playground.jpg')
     st.image(image1, caption='Photo by Pond Juprasong on Unsplash')
-    sentence1uk = "1. Підемо в парк"
-    sentence2uk = "2. Давай пограємо в хованки"
-    sentence3uk = "3. Xодімо на гойдалки"
-    sentence4uk = "4. Підемо на гірку"
+    sentence1uk = "Підемо в парк"
+    sentence2uk = "Давай пограємо в хованки"
+    sentence3uk = "Xодімо на гойдалки"
+    sentence4uk = "Підемо на гірку"
     
     cola, colb, colc, cold = st.columns(4)
     with cola:
