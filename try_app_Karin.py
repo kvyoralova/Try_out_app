@@ -3,7 +3,6 @@ from PIL import Image
 from gtts import gTTS
 from googletrans import Translator
 translator = Translator()
-#from google.transliteration import transliterate_text
 from transliterate import translit, get_available_language_codes
 
 st.title("Італійський розмовник для дітей - Итальянский разговорник для детей")
@@ -11,21 +10,25 @@ st.title("Італійський розмовник для дітей - Итал
 language = st.radio( "Виберіть мову - Выберите язык" , ('Русский', 'Yкраїнський'))
 
 def trans(sentence):
-  translation = translator.translate(sentence, dest='it')
-  translation = translation.text
-  st.write(translation)
-  tts1=gTTS(translation, lang = 'it')
-  tts1.save('your_file.mp3')
-  audio_file = open('your_file.mp3', 'rb')
-  st.audio(data=audio_file, format="audio/mp3", start_time = 0)
+  col2, col3, col4 = st.column(3)
+  with col2:
+    translation = translator.translate(sentence, dest='it')
+    translation = translation.text
+    st.write(translation)
+  with col3:
+    tts1=gTTS(translation, lang = 'it')
+    tts1.save('your_file.mp3')
+    audio_file = open('your_file.mp3', 'rb')
+    st.audio(data=audio_file, format="audio/mp3", start_time = 0)
   if language == 'Русский':
     lan = 'ru'
   elif language == 'Yкраїнський':
     lan = 'uk'
   else:
     pass
-  result = translit(translation, lan)
-  st.write(result)
+  with col4:
+    result = translit(translation, lan)
+    st.write(result)
     
 
 if language == 'Русский':
