@@ -8,7 +8,27 @@ from transliterate import translit, get_available_language_codes
 st.title("Італійський розмовник для дітей - Итальянский разговорник для детей")
 
 language = st.radio( "Виберіть мову - Выберите язык" , ('Русский', 'Yкраїнський'))
-
+if language == 'Русский':
+  cola, colb, colc, cold = st.columns(4)
+    with cola:
+      st.subheader("Полезные выражения")
+    with colb:
+      st.subheader("Итальянский перевод")
+    with colc:
+      st.subheader("Вот как это звучит")
+    with cold:
+      st.subheader("На кириллице")
+if language == 'Yкраїнський':
+   cola, colb, colc, cold = st.columns(4)
+    with cola:
+      st.subheader("Корисні вирази")
+    with colb:
+      st.subheader("Італійський переклад")
+    with colc:
+      st.subheader("От як це звучить")
+    with cold:
+      st.subheader("На кирилиці")
+      
 def phrasebook(sentence):
   col1, col2, col3, col4 = st.columns(4)
   with col1:
@@ -59,25 +79,23 @@ if language == 'Русский':
   if placechoice == 'Площадка для игр':
     image1 = Image.open('playground.jpg')
     st.image(image1, caption='Photo by Pond Juprasong on Unsplash')
-    cola, colb, colc, cold = st.columns(4)
-    with cola:
-      st.subheader("Полезные выражения")
-    with colb:
-      st.subheader("Итальянский перевод")
-    with colc:
-      st.subheader("Вот как это звучит")
-    with cold:
-      st.subheader("На кириллице")
+    
       
       
     sentence1 = "Пойдем в парк" 
     sentence2 = "Давай играть в прятки"
     sentence3 = "Давай покатаемся на качелях"
     sentence4 = "Пойдем на горку"
+    translation3 = "Andiamo sull'altalena"
+    translation4 = "Andiamo sullo scivolo"
     
     phrasebook(sentence1)
     phrasebook(sentence2)
+    st.write(sentence3)
+    st.write(transaltion3)
     phrasebooknotranslation(sentence3)
+    st.write(sentence4)
+    st.write(translation4)
     phrasebooknotranslation(sentence4)
       
   if placechoice == 'Школа':
@@ -96,15 +114,6 @@ if language == 'Yкраїнський':
     sentence3uk = "Xодімо на гойдалки"
     sentence4uk = "Підемо на гірку"
     
-    cola, colb, colc, cold = st.columns(4)
-    with cola:
-      st.subheader("Корисні вирази")
-    with colb:
-      st.subheader("Італійський переклад")
-    with colc:
-      st.subheader("От як це звучить")
-    with cold:
-      st.subheader("На кирилиці")
     
     phrasebook(sentence1uk)
     phrasebook(sentence2uk)
