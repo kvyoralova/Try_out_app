@@ -32,7 +32,7 @@ def phrasebook(sentence):
     result = translit(translation, lan)
     st.write(result)
     
-def phrasebooknotranslation (text):
+def phrasebooknotranslation (translation):
   col1, col2, col3, col4 = st.columns(4)
   with col3:
     tts1=gTTS(translation, lang = 'it')
