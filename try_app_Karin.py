@@ -123,7 +123,7 @@ if language == 'Русский':
     
   if placechoice == 'Магазин канцтоваров':
     image3 = Image.open('stationary_shop.jpg')
-    st.image(image2, caption='Photo by Kenny Eliason on Unsplash')
+    st.image(image3, caption='Photo by @candelarms on Unsplash')
     cola, colb, colc, cold = st.columns(4)
     with cola:
       st.subheader("Полезные выражения")
