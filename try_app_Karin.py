@@ -95,6 +95,15 @@ if language == 'Русский':
   if placechoice == 'Школа':
     image2 = Image.open('school.jpg')
     st.image(image2, caption='Photo by Kenny Eliason on Unsplash')
+    cola, colb, colc, cold = st.columns(4)
+    with cola:
+      st.subheader("Полезные выражения")
+    with colb:
+      st.subheader("Итальянский перевод")
+    with colc:
+      st.subheader("Вот как это звучит")
+    with cold:
+      st.subheader("На кириллице")
     sentence6 = "Потом поиграем вместе?"
     sentence7 = "Давай сделаем пазл"
     sentence8 = "Давай рисовать"
@@ -136,7 +145,27 @@ if language == 'Yкраїнський':
   if placechoiceuk == 'Школа':
     image2 = Image.open('school.jpg')
     st.image(image2, caption='Photo by Kenny Eliason on Unsplash') 
-  
+    cola, colb, colc, cold = st.columns(4)
+    with cola:
+      st.subheader("Корисні вирази")
+    with colb:
+      st.subheader("Італійський переклад")
+    with colc:
+      st.subheader("От як це звучить")
+    with cold:
+      st.subheader("На кирилиці")
+    
+    sentence6uk = "Потім пограємось разом?"
+    sentence7uk = "Давай зробимо пазл"
+    sentence8uk = "Давай малювати"
+    sentence9uk = "Підемо в сад?"
+    sentence10uk = "Чи можна твій фломастер?"
+    
+    phrasebook(sentence6uk)
+    phrasebook(sentence7uk)
+    phrasebook(sentence8uk)
+    phrasebook(sentence9uk)
+    phrasebook(sentence10uk)
   
 with st.expander("See credits"):
      st.write("""
