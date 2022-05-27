@@ -81,12 +81,7 @@ if language == 'Русский':
     phrasebook(sentence1)
     phrasebook(sentence2)
     phrasebooknotranslation(sentence3, translation3)
-    
-    with col1:
-      st.write(sentence4)
-    with col2:
-      st.write(translation4)
-    phrasebooknotranslation(translation4)
+    phrasebooknotranslation(sentence4, translation4)
       
   if placechoice == 'Школа':
     image2 = Image.open('school.jpg')
