@@ -90,7 +90,7 @@ if language == 'Русский':
     phrasebook(sentence2)
     phrasebooknotranslation(sentence3, translation3)
     phrasebooknotranslation(sentence4, translation4)
-    phrasebook(sentence5)
+    phrasebooknotranslation(sentence5, translation5)
       
   if placechoice == 'Школа':
     image2 = Image.open('school.jpg')
