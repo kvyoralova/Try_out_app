@@ -12,11 +12,11 @@ translation2 = "Giochiamo a nascondino"
 translation3 = "Andiamo sull'altalena"
 translation4 = "Andiamo sullo scivolo"
 translation5 = "Saltiamo la corda"
-#translation6 = 
+translation6 = "Dopo giochiamo insieme?"
 translation7 = "Facciamo un puzzle"
 translation8 = "Disegnamo?"
 translation9 = "Andiamo in giardino?"
-translation10 = "Posso andare in bagno?"
+translation10 = "Mi presti il tuo pennarello?"
 
 def phrasebook(sentence):
   col1, col2, col3, col4 = st.columns(4)
@@ -95,8 +95,17 @@ if language == 'Русский':
   if placechoice == 'Школа':
     image2 = Image.open('school.jpg')
     st.image(image2, caption='Photo by Kenny Eliason on Unsplash')
-    #sentence6 = '
+    sentence6 = "Потом поиграем вместе?"
+    sentence7 = "Давай сделаем пазл"
+    sentence8 = "Давай рисовать"
+    sentence9 = "Пойдём в сад?"
+    sentence10 = "Можно твой фломастер?"
     
+    phrasebook(sentence6)
+    phrasebook(sentence7)
+    phrasebook(sentence8)
+    phrasebook(sentence9)
+    phrasebook(sentence10)
   
 if language == 'Yкраїнський':
   placechoiceuk = st.selectbox("Куди ти хочеш піти сьогодні? Bыбери одно з вказаних місць:", ('Майданчик для ігор', 'Школа', 'Магазин'))
