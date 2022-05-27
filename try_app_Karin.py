@@ -31,7 +31,27 @@ def phrasebook(sentence):
       pass
     result = translit(translation, lan)
     st.write(result)
-  
+    
+  def phrasebooknotranslation (text):
+    with col1:
+    st.write(sentence)
+  with col2:
+    st.write(translation)
+  with col3:
+    tts1=gTTS(translation, lang = 'it')
+    tts1.save('your_file.mp3')
+    audio_file = open('your_file.mp3', 'rb')
+    st.audio(data=audio_file, format="audio/mp3", start_time = 0)
+  with col4:
+    if language == 'Русский':
+      lan = 'ru'
+    elif language == 'Yкраїнський':
+      lan = 'uk'
+    else:
+      pass
+    result = translit(translation, lan)
+    st.write(result)
+    
 
 if language == 'Русский':
   placechoice = st.selectbox("Куда ты хочешь пойти сегодня? Bыбери одно из указанных мест:", ('Площадка для игр', 'Школа', 'Магазин'))
@@ -56,8 +76,8 @@ if language == 'Русский':
     
     phrasebook(sentence1)
     phrasebook(sentence2)
-    phrasebook(sentence3)
-    phrasebook(sentence4)
+    phrasebooknotranslation(sentence3)
+    phrasebooknotranslation(sentence4)
       
   if placechoice == 'Школа':
     image2 = Image.open('school.jpg')
@@ -76,7 +96,7 @@ if language == 'Yкраїнський':
     sentence4uk = "Підемо на гірку"
     
     cola, colb, colc, cold = st.columns(4)
-      with cola:
+    with cola:
       st.subheader("Корисні вирази")
     with colb:
       st.subheader("Італійський переклад")
@@ -93,3 +113,14 @@ if language == 'Yкраїнський':
   if placechoiceuk == 'Школа':
     image2 = Image.open('school.jpg')
     st.image(image2, caption='Photo by Kenny Eliason on Unsplash') 
+  
+  
+  
+  with st.expander("See credits"):
+     st.write("""
+          - For Wikipedia logo: https://en.wikipedia.org/wiki/Wikipedia_logo#/media/File:Wikipedia-logo-v2.svg, available under the Creative Commons Attribution-ShareAlike License 3.0; a
+        """)
+     st.write("""- For the sample audio file: Performer: Muriel Nguyen Xuan and Stéphane MagnenatComposer: Frédéric Chopin, License: Creative Commons Attribution-Share Alike 4.0 International, 3.0 Unported, 2.5 Generic, 2.0 Generic and 1.0 Generic license. https://creativecommons.org/licenses/by-sa/4.0/, URL: https://upload.wikimedia.org/wikipedia/commons/c/c4/Muriel-Nguyen-Xuan-Chopin-valse-opus64-1.ogg
+     """)
+     st.write("""- For the tutorial: https://docs.streamlit.io/library/api-reference/media/st.audio 
+     """)
