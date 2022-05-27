@@ -105,7 +105,7 @@ if language == 'Русский':
     phrasebook(sentence7)
     phrasebook(sentence8)
     phrasebook(sentence9)
-    phrasebook(sentence10)
+    phrasebooknotranslation(sentence10, translation10)
   
 if language == 'Yкраїнський':
   placechoiceuk = st.selectbox("Куди ти хочеш піти сьогодні? Bыбери одно з вказаних місць:", ('Майданчик для ігор', 'Школа', 'Магазин'))
