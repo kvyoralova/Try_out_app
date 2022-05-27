@@ -8,7 +8,10 @@ from transliterate import translit, get_available_language_codes
 st.title("Італійський розмовник для дітей - Итальянский разговорник для детей")
 
 language = st.radio( "Виберіть мову - Выберите язык" , ('Русский', 'Yкраїнський'))
-      
+translation2 = "Giochiamo a nascondino"
+translation3 = "Andiamo sull'altalena"
+translation4 = "Andiamo sullo scivolo"
+
 def phrasebook(sentence):
   col1, col2, col3, col4 = st.columns(4)
   with col1:
@@ -75,8 +78,6 @@ if language == 'Русский':
     sentence2 = "Давай играть в прятки"
     sentence3 = "Давай покатаемся на качелях"
     sentence4 = "Пойдем на горку"
-    translation3 = "Andiamo sull'altalena"
-    translation4 = "Andiamo sullo scivolo"
     
     phrasebook(sentence1)
     phrasebook(sentence2)
@@ -112,16 +113,15 @@ if language == 'Yкраїнський':
     
     phrasebook(sentence1uk)
     phrasebook(sentence2uk)
-    phrasebook(sentence3uk)
-    phrasebook(sentence4uk)
+    phrasebooknotranslation(sentence3uk, translation3)
+    phrasebooktranslation(sentence4uk, translation4)
 
   if placechoiceuk == 'Школа':
     image2 = Image.open('school.jpg')
     st.image(image2, caption='Photo by Kenny Eliason on Unsplash') 
   
   
-  
-  with st.expander("See credits"):
+with st.expander("See credits"):
      st.write("""
           - For Wikipedia logo: https://en.wikipedia.org/wiki/Wikipedia_logo#/media/File:Wikipedia-logo-v2.svg, available under the Creative Commons Attribution-ShareAlike License 3.0; a
         """)
