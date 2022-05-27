@@ -11,6 +11,12 @@ language = st.radio( "Виберіть мову - Выберите язык" , (
 translation2 = "Giochiamo a nascondino"
 translation3 = "Andiamo sull'altalena"
 translation4 = "Andiamo sullo scivolo"
+translation5 = "Saltiamo la corda"
+translation6 = 
+translation7 = "Facciamo un puzzle"
+translation8 = "Disegnamo?"
+translation9 = "Andiamo in giardino?"
+translation10 = "Posso andare in bagno?"
 
 def phrasebook(sentence):
   col1, col2, col3, col4 = st.columns(4)
@@ -78,11 +84,13 @@ if language == 'Русский':
     sentence2 = "Давай играть в прятки"
     sentence3 = "Давай покатаемся на качелях"
     sentence4 = "Пойдем на горку"
+    sentence5 = "Давайте прыгать на скакалке"
     
     phrasebook(sentence1)
     phrasebook(sentence2)
     phrasebooknotranslation(sentence3, translation3)
     phrasebooknotranslation(sentence4, translation4)
+    phrasebook(sentence5)
       
   if placechoice == 'Школа':
     image2 = Image.open('school.jpg')
