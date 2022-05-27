@@ -10,24 +10,24 @@ st.title("Італійський розмовник для дітей - Итал
 language = st.radio( "Виберіть мову - Выберите язык" , ('Русский', 'Yкраїнський'))
 if language == 'Русский':
   cola, colb, colc, cold = st.columns(4)
-    with cola:
-      st.subheader("Полезные выражения")
-    with colb:
-      st.subheader("Итальянский перевод")
-    with colc:
-      st.subheader("Вот как это звучит")
-    with cold:
-      st.subheader("На кириллице")
+  with cola:
+    st.subheader("Полезные выражения")
+  with colb:
+    st.subheader("Итальянский перевод")
+  with colc:
+    st.subheader("Вот как это звучит")
+  with cold:
+    st.subheader("На кириллице")
 if language == 'Yкраїнський':
-   cola, colb, colc, cold = st.columns(4)
-    with cola:
-      st.subheader("Корисні вирази")
-    with colb:
-      st.subheader("Італійський переклад")
-    with colc:
-      st.subheader("От як це звучить")
-    with cold:
-      st.subheader("На кирилиці")
+  cola, colb, colc, cold = st.columns(4)
+  with cola:
+    st.subheader("Корисні вирази")
+  with colb:
+    st.subheader("Італійський переклад")
+  with colc:
+    st.subheader("От як це звучить")
+  with cold:
+    st.subheader("На кирилиці")
       
 def phrasebook(sentence):
   col1, col2, col3, col4 = st.columns(4)
