@@ -32,8 +32,12 @@ def phrasebook(sentence):
     result = translit(translation, lan)
     st.write(result)
     
-def phrasebooknotranslation (translation):
+def phrasebooknotranslation (sentence, translation):
   col1, col2, col3, col4 = st.columns(4)
+  with col1:
+    st.write(sentence)
+  with col2:
+    st.write(translation)
   with col3:
     tts1=gTTS(translation, lang = 'it')
     tts1.save('your_file.mp3')
@@ -76,12 +80,7 @@ if language == 'Русский':
     
     phrasebook(sentence1)
     phrasebook(sentence2)
-    col1, col2, col3, col4 = st.columns(4)
-    with col1:
-      st.write(sentence3)
-    with col2:
-      st.write(translation3)
-    phrasebooknotranslation(translation3)
+    phrasebooknotranslation(sentence3, translation3)
     
     with col1:
       st.write(sentence4)
