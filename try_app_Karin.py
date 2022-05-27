@@ -17,6 +17,11 @@ translation7 = "Facciamo un puzzle"
 translation8 = "Disegnamo?"
 translation9 = "Andiamo in giardino?"
 translation10 = "Mi presti il tuo pennarello?"
+translation11 = "Buongiorno"
+translation12 = "Mi servirebbero dei quaderni"
+translation13 = "Avrei bisogno di un righello"
+translation14 = "Mi servirebbero le matite colorate"
+translation15 = "Avrei bisogno di un astuccio"
 
 def phrasebook(sentence):
   col1, col2, col3, col4 = st.columns(4)
@@ -64,7 +69,7 @@ def phrasebooknotranslation (sentence, translation):
     
 
 if language == 'Русский':
-  placechoice = st.selectbox("Куда ты хочешь пойти сегодня? Bыбери одно из указанных мест:", ('Площадка для игр', 'Школа', 'Магазин'))
+  placechoice = st.selectbox("Куда ты хочешь пойти сегодня? Bыбери одно из указанных мест:", ('Площадка для игр', 'Школа', 'Магазин канцтоваров'))
   if placechoice == 'Площадка для игр':
     image1 = Image.open('playground.jpg')
     st.image(image1, caption='Photo by Pond Juprasong on Unsplash')
@@ -115,6 +120,30 @@ if language == 'Русский':
     phrasebook(sentence8)
     phrasebook(sentence9)
     phrasebooknotranslation(sentence10, translation10)
+    
+  if placechoice == 'Магазин канцтоваров':
+    image3 = Image.open('stationary_shop.jpg')
+    st.image(image2, caption='Photo by Kenny Eliason on Unsplash')
+    cola, colb, colc, cold = st.columns(4)
+    with cola:
+      st.subheader("Полезные выражения")
+    with colb:
+      st.subheader("Итальянский перевод")
+    with colc:
+      st.subheader("Вот как это звучит")
+    with cold:
+      st.subheader("На кириллице")
+    sentence11 = "Добрый день"
+    sentence12 = "Мне нужны тетради"
+    sentence13 = "Мне нужна линейка"
+    sentence14 = "Мне нужны цветные карандаши"
+    sentence15 = "Мне нужен пенал"
+    
+    phrasebook(sentence11)
+    phrasebook(sentence12)
+    phrasebook(sentence13)
+    phrasebook(sentence14)
+    phrasebook(sentence15)
   
 if language == 'Yкраїнський':
   placechoiceuk = st.selectbox("Куди ти хочеш піти сьогодні? Bыбери одно з вказаних місць:", ('Майданчик для ігор', 'Школа', 'Магазин'))
