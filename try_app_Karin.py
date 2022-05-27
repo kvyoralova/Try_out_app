@@ -80,7 +80,7 @@ if language == 'Русский':
     with col1:
       st.write(sentence3)
     with col2:
-      st.write(transaltion3)
+      st.write(translation3)
     phrasebooknotranslation(translation3)
     
     with col1:
