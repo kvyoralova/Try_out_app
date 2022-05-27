@@ -115,7 +115,7 @@ if language == 'Русский':
     sentence7 = "Давай сделаем пазл"
     sentence8 = "Давай рисовать"
     sentence9 = "Пойдём в сад?"
-    sentence10 = "Можно твой фломастер?"
+    sentence10 = "Могу ли я взять твой фломастер?"
     
     phrasebook(sentence6)
     phrasebook(sentence7)
@@ -192,7 +192,7 @@ if language == 'Yкраїнський':
     sentence7uk = "Давай зробимо пазл"
     sentence8uk = "Давай малювати"
     sentence9uk = "Підемо в сад?"
-    sentence10uk = "Чи можна твій фломастер?"
+    sentence10uk = "Чи можу я узяти твій фломастер?"
     
     phrasebook(sentence6uk)
     phrasebook(sentence7uk)
