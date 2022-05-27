@@ -164,12 +164,14 @@ if language == 'Yкраїнський':
     sentence2uk = "Давай пограємо в хованки"
     sentence3uk = "Xодімо на гойдалки"
     sentence4uk = "Підемо на гірку"
+    sentence5uk = "Давайте стрибати на скакалці"
     
     
     phrasebook(sentence1uk)
     phrasebook(sentence2uk)
     phrasebooknotranslation(sentence3uk, translation3)
     phrasebooknotranslation(sentence4uk, translation4)
+    phrasebooknotranslation(sentence5uk, translation5)
 
   if placechoiceuk == 'Школа':
     image2 = Image.open('school.jpg')
@@ -215,10 +217,10 @@ if language == 'Yкраїнський':
     sentence15uk = "Мені потрібен пенал"
     
     phrasebook(sentence11uk)
-    phrasebook(sentence12uk)
-    phrasebook(sentence13uk)
+    phrasebooknotranslation(sentence12uk, translation12)
+    phrasebooknotranslation(sentence13uk, translation13)
     phrasebook(sentence14uk)
-    phrasebook(sentence15uk)
+    phrasebooknotranslation(sentence15uk, translation15)
     
   
 with st.expander("See credits"):
