@@ -133,7 +133,7 @@ if language == 'Русский':
       st.subheader("Вот как это звучит")
     with cold:
       st.subheader("На кириллице")
-    sentence11 = "Добрыйдень"
+    sentence11 = "Добрый день"
     sentence12 = "Мне нужны тетради"
     sentence13 = "Мне нужна линейка"
     sentence14 = "Мне нужны цветные карандаши"
@@ -146,7 +146,7 @@ if language == 'Русский':
     phrasebooknotranslation(sentence15, translation15)
   
 if language == 'Yкраїнський':
-  placechoiceuk = st.selectbox("Куди ти хочеш піти сьогодні? Bыбери одно з вказаних місць:", ('Майданчик для ігор', 'Школа', 'Магазин'))
+  placechoiceuk = st.selectbox("Куди ти хочеш піти сьогодні? Bыбери одно з вказаних місць:", ('Майданчик для ігор', 'Школа', 'Магазин канцтоварів'))
   if placechoiceuk == 'Майданчик для ігор':
     image1 = Image.open('playground.jpg')
     st.image(image1, caption='Photo by Pond Juprasong on Unsplash')
@@ -195,6 +195,31 @@ if language == 'Yкраїнський':
     phrasebook(sentence8uk)
     phrasebook(sentence9uk)
     phrasebooknotranslation(sentence10uk, translation10)
+    
+  if placechoiceuk == 'Магазин канцтоварів':
+    image2 = Image.open('school.jpg')
+    st.image(image2, caption='Photo by Kenny Eliason on Unsplash') 
+    cola, colb, colc, cold = st.columns(4)
+    with cola:
+      st.subheader("Корисні вирази")
+    with colb:
+      st.subheader("Італійський переклад")
+    with colc:
+      st.subheader("От як це звучить")
+    with cold:
+      st.subheader("На кирилиці")  
+    sentence11uk = "Доброго ранку"
+    sentence12uk = "Мені потрібні зошити"
+    sentence13uk = "Мені потрібна лінійка"
+    sentence14uk = "Мені потрібні кольорові олівці"
+    sentence15uk = "Мені потрібен пенал"
+    
+    phrasebook(sentence11uk)
+    phrasebook(sentence12uk)
+    phrasebook(sentence13uk)
+    phrasebook(sentence14uk)
+    phrasebook(sentence15uk)
+    
   
 with st.expander("See credits"):
      st.write("""
