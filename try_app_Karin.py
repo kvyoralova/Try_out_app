@@ -133,7 +133,7 @@ if language == 'Русский':
       st.subheader("Вот как это звучит")
     with cold:
       st.subheader("На кириллице")
-    sentence11 = "Добрый день"
+    sentence11 = "Добрыйдень"
     sentence12 = "Мне нужны тетради"
     sentence13 = "Мне нужна линейка"
     sentence14 = "Мне нужны цветные карандаши"
@@ -141,9 +141,9 @@ if language == 'Русский':
     
     phrasebook(sentence11)
     phrasebook(sentence12)
-    phrasebook(sentence13)
+    phrasebooknotranslation(sentence13, translation13)
     phrasebook(sentence14)
-    phrasebook(sentence15)
+    phrasebooknotranslation(sentence15, translation15)
   
 if language == 'Yкраїнський':
   placechoiceuk = st.selectbox("Куди ти хочеш піти сьогодні? Bыбери одно з вказаних місць:", ('Майданчик для ігор', 'Школа', 'Магазин'))
