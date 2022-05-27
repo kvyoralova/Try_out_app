@@ -165,7 +165,7 @@ if language == 'Yкраїнський':
     phrasebook(sentence7uk)
     phrasebook(sentence8uk)
     phrasebook(sentence9uk)
-    phrasebook(sentence10uk)
+    phrasebooknotranslation(sentence10uk, translation10)
   
 with st.expander("See credits"):
      st.write("""
