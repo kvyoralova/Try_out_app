@@ -34,10 +34,6 @@ def phrasebook(sentence):
     
 def phrasebooknotranslation (text):
   col1, col2, col3, col4 = st.columns(4)
-  with col1:
-    st.write(sentence)
-  with col2:
-    st.write(translation)
   with col3:
     tts1=gTTS(translation, lang = 'it')
     tts1.save('your_file.mp3')
@@ -80,12 +76,17 @@ if language == 'Русский':
     
     phrasebook(sentence1)
     phrasebook(sentence2)
-    st.write(sentence3)
-    st.write(transaltion3)
-    phrasebooknotranslation(sentence3)
-    st.write(sentence4)
-    st.write(translation4)
-    phrasebooknotranslation(sentence4)
+    with col1:
+      st.write(sentence3)
+    with col2:
+      st.write(transaltion3)
+    phrasebooknotranslation(translation3)
+    
+    with col1:
+      st.write(sentence4)
+    with col2:
+      st.write(translation4)
+    phrasebooknotranslation(translation4)
       
   if placechoice == 'Школа':
     image2 = Image.open('school.jpg')
