@@ -139,7 +139,7 @@ if language == 'Русский':
     sentence14 = "Мне нужны цветные карандаши"
     sentence15 = "Мне нужен пенал"
     
-    phrasebook(sentence11)
+    phrasebooknotranslation(sentence11, translation11)
     phrasebook(sentence12)
     phrasebooknotranslation(sentence13, translation13)
     phrasebook(sentence14)
