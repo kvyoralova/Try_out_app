@@ -76,7 +76,7 @@ if language == 'Yкраїнський':
     sentence4uk = "Підемо на гірку"
     
     cola, colb, colc, cold = st.columns(4)
-    with cola:
+      with cola:
       st.subheader("Корисні вирази")
     with colb:
       st.subheader("Італійський переклад")
