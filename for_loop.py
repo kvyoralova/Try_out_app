@@ -69,7 +69,7 @@ def phrasebooknotranslation (sentence, translation):
     result = translit(translation, lan)
     st.write(result)
     
-for el in placecoiche:
+for el in placechoice:
   if language == 'Русский':
     cola, colb, colc, cold = st.columns(4)
     with cola:
