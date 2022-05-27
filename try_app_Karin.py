@@ -33,16 +33,17 @@ def phrasebook(sentence):
     st.write(result)
     
   def phrasebooknotranslation (text):
+    col1, col2, col3, col4 = st.columns(4)
     with col1:
-    st.write(sentence)
-  with col2:
-    st.write(translation)
-  with col3:
-    tts1=gTTS(translation, lang = 'it')
-    tts1.save('your_file.mp3')
-    audio_file = open('your_file.mp3', 'rb')
-    st.audio(data=audio_file, format="audio/mp3", start_time = 0)
-  with col4:
+      st.write(sentence)
+    with col2:
+      st.write(translation)
+    with col3:
+      tts1=gTTS(translation, lang = 'it')
+      tts1.save('your_file.mp3')
+      audio_file = open('your_file.mp3', 'rb')
+      st.audio(data=audio_file, format="audio/mp3", start_time = 0)
+    with col4:
     if language == 'Русский':
       lan = 'ru'
     elif language == 'Yкраїнський':
