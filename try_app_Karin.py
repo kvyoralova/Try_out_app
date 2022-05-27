@@ -114,7 +114,7 @@ if language == 'Yкраїнський':
     phrasebook(sentence1uk)
     phrasebook(sentence2uk)
     phrasebooknotranslation(sentence3uk, translation3)
-    phrasebooktranslation(sentence4uk, translation4)
+    phrasebooknotranslation(sentence4uk, translation4)
 
   if placechoiceuk == 'Школа':
     image2 = Image.open('school.jpg')
