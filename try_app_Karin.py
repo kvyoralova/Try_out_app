@@ -76,6 +76,7 @@ if language == 'Русский':
     
     phrasebook(sentence1)
     phrasebook(sentence2)
+    col1, col2, col3, col4 = st.columns(4)
     with col1:
       st.write(sentence3)
     with col2:
