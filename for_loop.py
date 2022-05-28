@@ -69,35 +69,36 @@ def phrasebooknotranslation (sentence, translation):
     result = translit(translation, lan)
     st.write(result)
     
-for el in placechoice:
-  if language == 'Русский':
-    cola, colb, colc, cold = st.columns(4)
-    with cola:
-      st.subheader("Полезные выражения")
-    with colb:
-      st.subheader("Итальянский перевод")
-    with colc:
-      st.subheader("Вот как это звучит")
-    with cold:
-      st.subheader("На кириллице")
-  elif language == 'Yкраїнський':
-    cola, colb, colc, cold = st.columns(4)
-    with cola:
-      st.subheader("Корисні вирази")
-    with colb:
-      st.subheader("Італійський переклад")
-    with colc:
-      st.subheader("От як це звучить")
-    with cold:
-      st.subheader("На кирилиці")
-  else:
-    pass
+
       
 if language == 'Русский':
   placechoice = st.selectbox("Куда ты хочешь пойти сегодня? Bыбери одно из указанных мест:", ('Площадка для игр', 'Школа', 'Магазин канцтоваров'))
   if placechoice == 'Площадка для игр':
     image1 = Image.open('playground.jpg')
     st.image(image1, caption='Photo by Pond Juprasong on Unsplash')
+    for el in placechoice:
+      if language == 'Русский':
+      cola, colb, colc, cold = st.columns(4)
+      with cola:
+        st.subheader("Полезные выражения")
+      with colb:
+        st.subheader("Итальянский перевод")
+      with colc:
+        st.subheader("Вот как это звучит")
+      with cold:
+        st.subheader("На кириллице")
+    elif language == 'Yкраїнський':
+      cola, colb, colc, cold = st.columns(4)
+      with cola:
+        st.subheader("Корисні вирази")
+      with colb:
+        st.subheader("Італійський переклад")
+      with colc:
+        st.subheader("От як це звучить")
+      with cold:
+        st.subheader("На кирилиці")
+    else:
+      pass
     
       
     sentence1 = "Пойдем в парк" 
