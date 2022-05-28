@@ -201,8 +201,8 @@ if language == 'Yкраїнський':
     phrasebooknotranslation(sentence10uk, translation10)
     
   if placechoiceuk == 'Магазин канцтоварів':
-    image2 = Image.open('school.jpg')
-    st.image(image2, caption='Photo by Kenny Eliason on Unsplash') 
+    image3 = Image.open('stationary_shop.jpg')
+    st.image(image3, caption='Photo by @candelarms on Unsplash') 
     cola, colb, colc, cold = st.columns(4)
     with cola:
       st.subheader("Корисні вирази")
