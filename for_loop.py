@@ -80,7 +80,7 @@ for el in placechoice:
       st.subheader("Вот как это звучит")
     with cold:
       st.subheader("На кириллице")
-   elif language == 'Yкраїнський':
+  elif language == 'Yкраїнський':
     cola, colb, colc, cold = st.columns(4)
     with cola:
       st.subheader("Корисні вирази")
