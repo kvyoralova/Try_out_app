@@ -77,7 +77,7 @@ if language == 'Русский':
     image1 = Image.open('playground.jpg')
     st.image(image1, caption='Photo by Pond Juprasong on Unsplash')
     for el in placechoice:
-      if language == 'Русский':
+      #if language == 'Русский':
       cola, colb, colc, cold = st.columns(4)
       with cola:
         st.subheader("Полезные выражения")
@@ -87,16 +87,16 @@ if language == 'Русский':
         st.subheader("Вот как это звучит")
       with cold:
         st.subheader("На кириллице")
-    elif language == 'Yкраїнський':
-      cola, colb, colc, cold = st.columns(4)
-      with cola:
-        st.subheader("Корисні вирази")
-      with colb:
+    #elif language == 'Yкраїнський':
+      #cola, colb, colc, cold = st.columns(4)
+      #with cola:
+        #st.subheader("Корисні вирази")
+      #with colb:
         st.subheader("Італійський переклад")
-      with colc:
-        st.subheader("От як це звучить")
-      with cold:
-        st.subheader("На кирилиці")
+      #with colc:
+        #st.subheader("От як це звучить")
+      #with cold:
+        #st.subheader("На кирилиці")
     else:
       pass
     
