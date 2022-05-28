@@ -90,7 +90,7 @@ for el in placechoice:
       st.subheader("От як це звучить")
     with cold:
       st.subheader("На кирилиці")
-   else:
+  else:
     pass
       
 if language == 'Русский':
