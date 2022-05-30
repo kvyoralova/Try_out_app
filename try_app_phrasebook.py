@@ -228,4 +228,5 @@ if language == 'Yкраїнський':
 with st.expander("See credits"):
      st.write("""- For images: https://unsplash.com/ """)
      st.write("""- For googletrans: https://pypi.org/project/googletrans/ """)
-     st.write("""- For google-transliterate-api : https://pypi.org/project/google-transliteration-api/ """)
+     st.write("""- For google-transliterate-api: https://pypi.org/project/google-transliteration-api/ """)
+     st.write("""- For text-to-speech: https://pypi.org/project/SpeechRecognition/""")
