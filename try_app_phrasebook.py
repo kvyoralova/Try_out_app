@@ -89,24 +89,24 @@ if language == 'Русский':
       
       
     sentencespark = ["Пойдем в парк", "Давай играть в прятки"]
-    sentencesparktra = ["Давай покатаемся на качелях", "Пойдем на горку", "Давайте прыгать на скакалке"]
-    translationpark = ("Andiamo sull'altalena", "Andiamo sullo scivolo", "Saltiamo la corda")
+    #sentencesparktra = ["Давай покатаемся на качелях", "Пойдем на горку", "Давайте прыгать на скакалке"]
+    #translationpark = ("Andiamo sull'altalena", "Andiamo sullo scivolo", "Saltiamo la corda")
     #sentence1 = "Пойдем в парк" 
     #sentence2 = "Давай играть в прятки"
-    #sentence3 = "Давай покатаемся на качелях"
-    #sentence4 = "Пойдем на горку"
-    #sentence5 = "Давайте прыгать на скакалке"
+    sentence3 = "Давай покатаемся на качелях"
+    sentence4 = "Пойдем на горку"
+    sentence5 = "Давайте прыгать на скакалке"
     
     for el in sentencespark:
       phrasebook(el)
       
-    for el in sentencesparktra:
-      phrasebooknotranslation(el, translationpark)
+    #for el in sentencesparktra:
+      #phrasebooknotranslation(el, translationpark)
     #phrasebook(sentence1)
     #phrasebook(sentence2)
-    #phrasebooknotranslation(sentence3, translation3)
-    #phrasebooknotranslation(sentence4, translation4)
-    #phrasebooknotranslation(sentence5, translation5)
+    phrasebooknotranslation(sentence3, translation3)
+    phrasebooknotranslation(sentence4, translation4)
+    phrasebooknotranslation(sentence5, translation5)
       
   if placechoice == 'Школа':
     image2 = Image.open('school.jpg')
