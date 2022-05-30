@@ -5,6 +5,7 @@ from googletrans import Translator
 translator = Translator()
 from transliterate import translit, get_available_language_codes
 
+
 st.title("Італійський розмовник для дітей - Итальянский разговорник для детей")
 st.write(""" -  UK: Цей додаток має на меті допомогти українським дітям, як російською, так і українською мовою, вивчити та використовувати деякі корисні фрази італійською""") 
 st.write(""" -  RU: Это приложение нацелено на то, чтобы помочь украинским и русскоязычным детям выучить и использовать некоторые полезные фразы на итальянском языке""")
@@ -87,17 +88,24 @@ if language == 'Русский':
     
       
       
-    sentence1 = "Пойдем в парк" 
-    sentence2 = "Давай играть в прятки"
-    sentence3 = "Давай покатаемся на качелях"
-    sentence4 = "Пойдем на горку"
-    sentence5 = "Давайте прыгать на скакалке"
+    sentencespark = ["Пойдем в парк", "Давай играть в прятки"]
+    sentencesparktra = ["Давай покатаемся на качелях", "Пойдем на горку", "Давайте прыгать на скакалке"]
+    #sentence1 = "Пойдем в парк" 
+    #sentence2 = "Давай играть в прятки"
+    #sentence3 = "Давай покатаемся на качелях"
+    #sentence4 = "Пойдем на горку"
+    #sentence5 = "Давайте прыгать на скакалке"
     
-    phrasebook(sentence1)
-    phrasebook(sentence2)
-    phrasebooknotranslation(sentence3, translation3)
-    phrasebooknotranslation(sentence4, translation4)
-    phrasebooknotranslation(sentence5, translation5)
+    for el in sentencespark:
+      phrasebook(el)
+      
+    for el in sentencesparktra:
+      phrasebooknotranslation(el)
+    #phrasebook(sentence1)
+    #phrasebook(sentence2)
+    #phrasebooknotranslation(sentence3, translation3)
+    #phrasebooknotranslation(sentence4, translation4)
+    #phrasebooknotranslation(sentence5, translation5)
       
   if placechoice == 'Школа':
     image2 = Image.open('school.jpg')
