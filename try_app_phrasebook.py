@@ -1,4 +1,3 @@
-pip install --upgrade streamlit
 import streamlit as st
 from PIL import Image
 from gtts import gTTS
@@ -11,7 +10,7 @@ st.title("Італійський розмовник для дітей - Итал
 st.write(""" -  UK: Цей додаток має на меті допомогти українським дітям, як російською, так і українською мовою, вивчити та використовувати деякі корисні фрази італійською""") 
 st.write(""" -  RU: Это приложение нацелено на то, чтобы помочь украинским и русскоязычным детям выучить и использовать некоторые полезные фразы на итальянском языке""")
 
-language = st.radio( "Виберіть мову - Выберите язык" , ('Русский', 'Yкраїнський'), horizontal=False)
+language = st.radio( "Виберіть мову - Выберите язык" , ('Русский', 'Yкраїнський'))
 translation2 = "Giochiamo a nascondino"
 translation3 = "Andiamo sull'altalena"
 translation4 = "Andiamo sullo scivolo"
