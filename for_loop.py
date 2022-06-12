@@ -12,38 +12,64 @@ st.write(""" -  RU: Это приложение нацелено на то, чт
 
 language = st.radio( "Виберіть мову - Выберите язык" , ('Русский', 'Yкраїнський'))
 
-phrasebook =  [{'Пойдем в парк' : 'Andiamo al parco'},
-               {'Давай играть в прятки' : 'Giochiamo a nascondino'},
-               {'Давай покатаемся на качелях' : "Andiamo sull'altalena"},
-               {'Пойдем на горку' : 'Andiamo sullo scivolo'},
-               {'Давайте прыгать на скакалке' : 'Saltiamo la corda'}]
-for el in phrasebook:
-  for (key, value) in el.items():
-    col1, col2, col3, col4 = st.columns(4)
-    with col1:
-      st.write(key)
-    with col2:
-      translation = translator.translate(key, dest='it')
-      translated_text= translation.text
-      if translated_text != value:
-        translated_text = value
-      else:
-        translated_text = translated_text
-      st.write(translated_text)
-    with col3:
-      tts1=gTTS(translated_text, lang = 'it')
-      tts1.save('your_file.mp3')
-      audio_file = open('your_file.mp3', 'rb')
-      st.audio(data=audio_file, format="audio/mp3", start_time = 0)
-    with col4:
-      if language == 'Русский':
-        lan = 'ru'
-      elif language == 'Yкраїнський':
-        lan = 'uk'
-      else:
-        pass
-      transliterated_text = translit(translated_text, lan)
-      st.write(transliterated_text)
+if language == 'Русский':
+  placechoice = st.selectbox("Куда ты хочешь пойти сегодня? Bыбери одно из указанных мест:", ('Площадка для игр', 'Школа', 'Магазин канцтоваров'))
+  if placechoice == 'Площадка для игр':
+    image1 = Image.open('playground.jpg')
+    st.image(image1, caption='Photo by Pond Juprasong on Unsplash')
+  if placechoice == 'Школа':
+    image2 = Image.open('school.jpg')
+    st.image(image2, caption='Photo by Kenny Eliason on Unsplash')
+  else:
+    image3 = Image.open('stationary_shop.jpg')
+    st.image(image3, caption='Photo by @candelarms on Unsplash')
+
+phrases_ru = {'Площадка для игр': [{'Пойдем в парк' : 'Andiamo al parco'},
+                                   {'Давай играть в прятки' : 'Giochiamo a nascondino'},
+                                   {'Давай покатаемся на качелях' : "Andiamo sull'altalena"},
+                                   {'Пойдем на горку' : 'Andiamo sullo scivolo'},
+                                   {'Давайте прыгать на скакалке' : 'Saltiamo la corda'}],
+              'Школа': [{'Потом поиграем вместе?' : 'Dopo giochiamo insieme?},
+                         {'Давай сделаем пазл' : 'Facciamo un puzzle'},
+                         {'Давай рисовать' : 'Disegnamo?'},
+                         {'Пойдём в сад?' : 'Andiamo in giardino?'},
+                         {'Могу ли я взять твой фломастер?' : 'Mi presti il tuo pennarello?'}],
+              'Магазин канцтоваров': [{' Добрый день' : 'Buongiorno'},
+                                      {'Мне нужны тетради' : 'Mi servirebbero dei quaderni'},
+                                      {'Мне нужна линейка' : 'Avrei bisogno di un righello'},
+                                      {'Мне нужны цветные карандаши' : 'Mi servirebbero le matite colorate'},
+                                      {'Сколько это стоит?' : 'Quanto costa?'}]
+                        }
+for el in placechoice:
+  for key, value in phrases_ru.items():
+    if key == placechoice:
+      for el in phrases_ru.values():
+        for (key, value) in el.items():
+        col1, col2, col3, col4 = st.columns(4)
+        with col1:
+          st.write(key)
+        with col2:
+          translation = translator.translate(key, dest='it')
+          translated_text= translation.text
+          if translated_text != value:
+            translated_text = value
+          else:
+            translated_text = translated_text
+          st.write(translated_text)
+        with col3:
+          tts1=gTTS(translated_text, lang = 'it')
+          tts1.save('your_file.mp3')
+          audio_file = open('your_file.mp3', 'rb')
+          st.audio(data=audio_file, format="audio/mp3", start_time = 0)
+        with col4:
+      #if language == 'Русский':
+        #lan = 'ru'
+      #elif language == 'Yкраїнський':
+        #lan = 'uk'
+      #else:
+        #pass
+        transliterated_text = translit(translated_text, 'ru')
+        st.write(transliterated_text)
     
 
 #translation2 = "Giochiamo a nascondino"
