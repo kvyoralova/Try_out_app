@@ -53,7 +53,7 @@ phrases_ru = {'Площадка для игр': [{'Пойдем в парк' : '
                         }
 
 for key in phrases_ru.keys():
-  for placechoice:
+  for choice in placechoice:
     for phrasecouple in phrases_ru.values():
       for el in phrasecouple:
         for (key, value) in el.items():
