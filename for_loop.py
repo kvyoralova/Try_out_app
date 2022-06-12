@@ -29,7 +29,7 @@ phrases_ru = {'Площадка для игр': [{'Пойдем в парк' : '
                                    {'Давай покатаемся на качелях' : "Andiamo sull'altalena"},
                                    {'Пойдем на горку' : 'Andiamo sullo scivolo'},
                                    {'Давайте прыгать на скакалке' : 'Saltiamo la corda'}],
-              'Школа': [{'Потом поиграем вместе?' : 'Dopo giochiamo insieme?},
+              'Школа': [{'Потом поиграем вместе?' : 'Dopo giochiamo insieme?'},
                          {'Давай сделаем пазл' : 'Facciamo un puzzle'},
                          {'Давай рисовать' : 'Disegnamo?'},
                          {'Пойдём в сад?' : 'Andiamo in giardino?'},
