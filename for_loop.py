@@ -20,9 +20,11 @@ if language == 'Русский':
   if placechoice == 'Школа':
     image2 = Image.open('school.jpg')
     st.image(image2, caption='Photo by Kenny Eliason on Unsplash')
-  else:
+  if:
     image3 = Image.open('stationary_shop.jpg')
     st.image(image3, caption='Photo by @candelarms on Unsplash')
+  else:
+    pass
 
 phrases_ru = {'Площадка для игр': [{'Пойдем в парк' : 'Andiamo al parco'},
                                    {'Давай играть в прятки' : 'Giochiamo a nascondino'},
