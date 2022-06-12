@@ -19,31 +19,31 @@ phrasebook =  [{'Пойдем в парк' : 'Andiamo al parco'},
                {'Давайте прыгать на скакалке' : 'Saltiamo la corda'}]
 for el in phrasebook:
   for key, value in el.items:
-  col1, col2, col3, col4 = st.columns(4)
-  with col1:
-    st.write(key)
-  with col2:
-    translation = translator.translate(key, dest='it')
-    translated_text= translation.text
-    st.write(translated_text)
-    if translated_text =! value
-      translated_text = value
-    else:
+    col1, col2, col3, col4 = st.columns(4)
+    with col1:
+      st.write(key)
+    with col2:
+      translation = translator.translate(key, dest='it')
+      translated_text= translation.text
+      st.write(translated_text)
+      if translated_text =! value
+        translated_text = value
+      else:
+        pass
+    with col3:
+      tts1=gTTS(translated_text, lang = 'it')
+      tts1.save('your_file.mp3')
+      audio_file = open('your_file.mp3', 'rb')
+      st.audio(data=audio_file, format="audio/mp3", start_time = 0)
+    with col4:
+      if language == 'Русский':
+        lan = 'ru'
+      elif language == 'Yкраїнський':
+        lan = 'uk'
+      else:
       pass
-  with col3:
-    tts1=gTTS(translated_text, lang = 'it')
-    tts1.save('your_file.mp3')
-    audio_file = open('your_file.mp3', 'rb')
-    st.audio(data=audio_file, format="audio/mp3", start_time = 0)
-  with col4:
-    if language == 'Русский':
-      lan = 'ru'
-    elif language == 'Yкраїнський':
-      lan = 'uk'
-    else:
-      pass
-    transliterated_text = translit(translated_text, lan)
-    st.write(result)
+      transliterated_text = translit(translated_text, lan)
+      st.write(result)
     
 
 #translation2 = "Giochiamo a nascondino"
