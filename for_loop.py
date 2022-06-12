@@ -27,13 +27,13 @@ if language == 'Русский':
     pass
 cola, colb, colc, cold = st.columns(4)
 with cola:
-  st.subheader("Корисні вирази")
+  st.subheader("Полезные выражения")
 with colb:
-  st.subheader("Італійський переклад")
+  st.subheader("Итальянский перевод")
 with colc:
-  st.subheader("От як це звучить")
+  st.subheader("Вот как это звучит")
 with cold:
-  st.subheader("На кирилиці")
+  st.subheader("На кириллице")
       
 phrases_ru = {'Площадка для игр': [{'Пойдем в парк' : 'Andiamo al parco'},
                                    {'Давай играть в прятки' : 'Giochiamo a nascondino'},
