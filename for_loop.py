@@ -119,7 +119,7 @@ phrases_ukr = {'Майданчик для ігор': [{'Підемо в парк
                                       {'Скільки це коштує?' : 'Quanto costa?'}]
                         }
 for (key, value) in phrases_ru.items():
-  if placechoice == key: # voglio che mi prenda i value di questa key
+  if placechoice == key: 
     for phrasecouple in phrases_ru.values():
       for el in phrasecouple:
         for (key, value) in el.items():
