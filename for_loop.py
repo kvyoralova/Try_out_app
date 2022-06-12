@@ -7,8 +7,18 @@ from transliterate import translit, get_available_language_codes
 
 
 st.title("Італійський розмовник для дітей - Итальянский разговорник для детей")
-st.write(""" -  UK: Цей додаток має на меті допомогти українським дітям, як російською, так і українською мовою, вивчити та використовувати деякі корисні фрази італійською""") 
+purposeru = st.write(""" -  UK: Цей додаток має на меті допомогти українським дітям, як російською, так і українською мовою, вивчити та використовувати деякі корисні фрази італійською""") 
 st.write(""" -  RU: Это приложение нацелено на то, чтобы помочь украинским и русскоязычным детям выучить и использовать некоторые полезные фразы на итальянском языке""")
+purpose = st.checkbox('Clik here if you want to know the purpose of this app in another language')
+if purpose:
+  lang = st.text_input('Insert the code of a language in which you want to know the purpose of the app', help= "uk for English, de for German, it for Italian")
+  translation = translator.translate(purposeru, dest='it')
+  purposetext= translation.text
+  st.write(purposetext)
+else:
+  pass
+  
+
 
 language = st.radio( "Виберіть мову - Выберите язык" , ('Русский', 'Yкраїнський'))
 
@@ -54,7 +64,7 @@ phrases_ru = {'Площадка для игр': [{'Пойдем в парк' : '
 
 
 for (key, value) in phrases_ru.items():
-  if placechoice == key:
+  if placechoice == key: # voglio che mi prenda i value di questa key
     for phrasecouple in phrases_ru.values():
       for el in phrasecouple:
         for (key, value) in el.items():
