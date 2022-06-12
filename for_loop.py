@@ -58,7 +58,7 @@ for el in placechoice:
                 translated_text = value
               else:
                 translated_text = translated_text
-                st.write(translated_text)
+              st.write(translated_text)
             with col3:
               tts1=gTTS(translated_text, lang = 'it')
               tts1.save('your_file.mp3')
