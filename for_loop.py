@@ -26,10 +26,9 @@ for el in phrasebook:
       translation = translator.translate(key, dest='it')
       translated_text= translation.text
       if translated_text != value:
-        translated_text = value
-        st.write(translated_text)
+        st.write(value)
       else:
-        pass
+        st.write(translated_text)
     with col3:
       tts1=gTTS(translated_text, lang = 'it')
       tts1.save('your_file.mp3')
