@@ -31,7 +31,7 @@ if language == 'Русский':
       st.image(image2, caption='Photo by Kenny Eliason on Unsplash')
   if placechoice == 'Магазин канцтоваров':
       image3 = Image.open('stationary_shop.jpg')
-     st.image(image3, caption='Photo by @candelarms on Unsplash')
+      st.image(image3, caption='Photo by @candelarms on Unsplash')
   else:
     pass
 cola, colb, colc, cold = st.columns(4)
