@@ -41,7 +41,7 @@ for el in phrasebook:
       elif language == 'Yкраїнський':
         lan = 'uk'
       else:
-      pass
+        pass
       transliterated_text = translit(translated_text, lan)
       st.write(result)
     
