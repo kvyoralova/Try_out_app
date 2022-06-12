@@ -53,12 +53,11 @@ phrases_ru = {'Площадка для игр': [{'Пойдем в парк' : '
                         }
 
 for key in phrases_ru.keys():
-  for el in placechoice:
-    if el == key: 
-      for phrasecouple in phrases_ru.values():
-        for el in phrasecouple:
-          for (key, value) in el.items():
-            col1, col2, col3, col4 = st.columns(4)
+  for placechoice:
+    for phrasecouple in phrases_ru.values():
+      for el in phrasecouple:
+        for (key, value) in el.items():
+          col1, col2, col3, col4 = st.columns(4)
             with col1:
               st.write(key)
             with col2:
