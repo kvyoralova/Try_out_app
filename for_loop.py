@@ -18,7 +18,7 @@ phrasebook =  [{'Пойдем в парк' : 'Andiamo al parco'},
                {'Пойдем на горку' : 'Andiamo sullo scivolo'},
                {'Давайте прыгать на скакалке' : 'Saltiamo la corda'}]
 for el in phrasebook:
-  for (key, value) in el.items:
+  for (key, value) in el.items():
     col1, col2, col3, col4 = st.columns(4)
     with col1:
       st.write(key)
