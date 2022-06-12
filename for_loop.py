@@ -43,7 +43,7 @@ for el in phrasebook:
       else:
         pass
       transliterated_text = translit(translated_text, lan)
-      st.write(result)
+      st.write(transliterated_text)
     
 
 #translation2 = "Giochiamo a nascondino"
