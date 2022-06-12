@@ -10,8 +10,8 @@ st.title("Італійський розмовник для дітей - Итал
 purposeru = st.write(""" -  UK: Цей додаток має на меті допомогти українським дітям, як російською, так і українською мовою, вивчити та використовувати деякі корисні фрази італійською""") 
 st.write(""" -  RU: Это приложение нацелено на то, чтобы помочь украинским и русскоязычным детям выучить и использовать некоторые полезные фразы на итальянском языке""")
 purpose = st.checkbox('Clik here if you want to know the purpose of this app in another language')
-if purpose:
-  lang = st.text_input("Insert the code of a language in which you want to know the purpose of the app", 'en', help= "en for English, de for German, it for Italian")
+if purpose:2 '
+  lang = st.text_input("Insert the code of a language in which you want to know the purpose of the app", " 'en' ", help= "en for English, de for German, it for Italian")
   translation = translator.translate(purposeru, dest = lang)
   purposetext= translation.text
   st.write(purposetext)
