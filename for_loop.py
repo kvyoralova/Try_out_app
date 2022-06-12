@@ -51,9 +51,8 @@ phrases_ru = {'Площадка для игр': [{'Пойдем в парк' : '
                                       {'Мне нужны цветные карандаши' : 'Mi servirebbero le matite colorate'},
                                       {'Сколько это стоит?' : 'Quanto costa?'}]
                         }
-
-for key in phrases_ru.keys():
-  for choice in placechoice:
+for choice in placechoice:
+  for key in phrases_ru.keys():
     for phrasecouple in phrases_ru.values():
       for el in phrasecouple:
         for (key, value) in el.items():
