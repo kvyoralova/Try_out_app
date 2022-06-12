@@ -83,8 +83,8 @@ def phrase_place (placechoice):
         #pass
               transliterated_text = translit(translated_text, 'ru')
               st.write(transliterated_text)
-else:
-  pass
+  else:
+    pass
 
 for el in placechoice:
   phrase_place('Школа')
