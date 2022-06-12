@@ -46,7 +46,7 @@ for el in placechoice:
   for key in phrases_ru.keys():
     if key == placechoice:
       for phrasecouple in phrases_ru.values():
-        for el in phrasescouple:
+        for el in phrasecouple:
           for (key, value) in el.items():
             col1, col2, col3, col4 = st.columns(4)
             with col1:
