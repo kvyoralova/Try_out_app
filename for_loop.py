@@ -43,36 +43,35 @@ phrases_ru = {'Площадка для игр': [{'Пойдем в парк' : '
                                       {'Сколько это стоит?' : 'Quanto costa?'}]
                         }
 for el in placechoice:
-  for (key, value) in phrases_ru.items():
-    if key == placechoice:
-      for value in phrases_ru.items():
-        for el in value:
-          for (key, value) in el.items():
-            col1, col2, col3, col4 = st.columns(4)
-            with col1:
-              st.write(key)
-            with col2:
-              translation = translator.translate(key, dest='it')
-              translated_text= translation.text
-              if translated_text != value:
-                translated_text = value
-              else:
-                translated_text = translated_text
+  for phrasecouple in phrases_ru.values():
+    if key in phrases_ru.key() == placechoice:
+      for el in phrasescouple:
+        for (key, value) in el.items():
+          col1, col2, col3, col4 = st.columns(4)
+          with col1:
+            st.write(key)
+          with col2:
+            translation = translator.translate(key, dest='it')
+            translated_text= translation.text
+            if translated_text != value:
+              translated_text = value
+            else:
+              translated_text = translated_text
               st.write(translated_text)
-            with col3:
-              tts1=gTTS(translated_text, lang = 'it')
-              tts1.save('your_file.mp3')
-              audio_file = open('your_file.mp3', 'rb')
-              st.audio(data=audio_file, format="audio/mp3", start_time = 0)
-            with col4:
+           with col3:
+             tts1=gTTS(translated_text, lang = 'it')
+             tts1.save('your_file.mp3')
+             audio_file = open('your_file.mp3', 'rb')
+             st.audio(data=audio_file, format="audio/mp3", start_time = 0)
+           with col4:
       #if language == 'Русский':
         #lan = 'ru'
       #elif language == 'Yкраїнський':
         #lan = 'uk'
       #else:
         #pass
-              transliterated_text = translit(translated_text, 'ru')
-              st.write(transliterated_text)
+             transliterated_text = translit(translated_text, 'ru')
+             st.write(transliterated_text)
     
 
 #translation2 = "Giochiamo a nascondino"
