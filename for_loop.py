@@ -73,7 +73,8 @@ for el in placechoice:
         #pass
               transliterated_text = translit(translated_text, 'ru')
               st.write(transliterated_text)
-    
+else:
+  pass
 
 #translation2 = "Giochiamo a nascondino"
 #translation3 = "Andiamo sull'altalena"
