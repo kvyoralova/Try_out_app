@@ -12,7 +12,8 @@ st.write(""" -  RU: Это приложение нацелено на то, чт
 purpose = st.checkbox('Clik here if you want to know the purpose of this app in another language')
 if purpose:
   lang = st.selectbox("Insert the code of a language in which you want to know the purpose of the app:", ('en', 'de', 'it'))
-  translation = translator.translate(purposeru, dest = lang)
+  purposelang = lang.text
+  translation = translator.translate(purposeru, dest = purposelang)
   purposetext= translation.text
   st.write(purposetext)
 else:
