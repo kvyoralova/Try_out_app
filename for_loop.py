@@ -11,7 +11,7 @@ purposeru = st.write(""" -  UK: Цей додаток має на меті до�
 st.write(""" -  RU: Это приложение нацелено на то, чтобы помочь украинским и русскоязычным детям выучить и использовать некоторые полезные фразы на итальянском языке""")
 purpose = st.checkbox('Clik here if you want to know the purpose of this app in another language')
 if purpose:
-  lang = st.text_input("Insert the code of a language in which you want to know the purpose of the app", " 'en' ", help= "en for English, de for German, it for Italian")
+  lang = st.text_input("Insert the code of a language in which you want to know the purpose of the app", 'en', help= "en for English, de for German, it for Italian")
   translation = translator.translate(purposeru, dest = lang)
   purposetext= translation.text
   st.write(purposetext)
