@@ -68,8 +68,8 @@ for el in placechoice:
         #lan = 'uk'
       #else:
         #pass
-          transliterated_text = translit(translated_text, 'ru')
-          st.write(transliterated_text)
+            transliterated_text = translit(translated_text, 'ru')
+            st.write(transliterated_text)
     
 
 #translation2 = "Giochiamo a nascondino"
