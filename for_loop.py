@@ -18,18 +18,21 @@ if purpose:
 else:
   pass
 
-with st.sidebar:
-  language = st.radio( "Виберіть мову - Выберите язык" , ('Русский', 'Yкраїнський'))
+
+language = st.radio( "Виберіть мову - Выберите язык" , ('Русский', 'Yкраїнський'))
 
 if language == 'Русский':
   placechoice = st.selectbox("Куда ты хочешь пойти сегодня? Bыбери одно из указанных мест:", ('Площадка для игр', 'Школа', 'Магазин канцтоваров'))
-  if placechoice == 'Площадка для игр':
+if language == 'Yкраїнський':
+  placechoice = st.selectbox("Куди ти хочеш піти сьогодні? Bыбери одно з вказаних місць:", ('Майданчик для ігор', 'Школа', 'Магазин канцтоварів'))
+  
+  if placechoice == 'Площадка для игр' or 'Майданчик для ігор':
     image1 = Image.open('playground.jpg')
     st.image(image1, caption='Photo by Pond Juprasong on Unsplash')
   if placechoice == 'Школа':
     image2 = Image.open('school.jpg')
     st.image(image2, caption='Photo by Kenny Eliason on Unsplash')
-  if placechoice == 'Магазин канцтоваров':
+  if placechoice == 'Магазин канцтоваров'or 'Магазин канцтоварів':
     image3 = Image.open('stationary_shop.jpg')
     st.image(image3, caption='Photo by @candelarms on Unsplash')
   else:
@@ -71,7 +74,7 @@ for (key, value) in phrases_ru.items():
           with col1:
             st.write(key)
           with col2:
-            translation = translator.translate(key, dest='it')
+            translation = translator.translate(key, dest= 'it')
             translated_text= translation.text
             if translated_text != value:
               translated_text = value
