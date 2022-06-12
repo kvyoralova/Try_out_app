@@ -17,10 +17,9 @@ if purpose:
   st.write(purposetext)
 else:
   pass
-  
 
-
-language = st.radio( "Виберіть мову - Выберите язык" , ('Русский', 'Yкраїнський'))
+with st.sidebar:
+  language = st.radio( "Виберіть мову - Выберите язык" , ('Русский', 'Yкраїнський'))
 
 if language == 'Русский':
   placechoice = st.selectbox("Куда ты хочешь пойти сегодня? Bыбери одно из указанных мест:", ('Площадка для игр', 'Школа', 'Магазин канцтоваров'))
