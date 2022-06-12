@@ -26,7 +26,7 @@ for el in phrasebook:
       translation = translator.translate(key, dest='it')
       translated_text= translation.text
       st.write(translated_text)
-      if translated_text =! value
+      if translated_text != value
         translated_text = value
       else:
         pass
